@@ -1,0 +1,105 @@
+﻿.margin-zero{
+    margin: 0;
+}
+.enter-page {
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    padding-left: 240px;
+}
+.enter-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 456px;
+    padding: 220px 160px 220px 88px;
+}
+.enter-block_head {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.enter-block_head-title {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.4000000059604645px;
+    text-align: left;
+}
+.enter-block_head-text {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    color: #6C7275;
+}
+.enter-block_head-link {
+    color: #38CB89;
+    font-weight: 600;
+}
+.enter-block_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+.enter-block_form-field {
+    border: 0;
+    border-bottom: 1px solid #E8ECEF;
+    height: 40px;
+}
+
+.enter-block_agreement[type="checkbox"] {
+    display: none;
+}
+
+.enter-block_agreement-text:before {
+    content: " ";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1.5px solid #6C7275;
+    border-radius: 4px;
+    border-image: initial;
+    margin-right: 8px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.enter-block_agreement:checked + .enter-block_agreement-text:before {
+    content: "✔";
+}
+
+.enter-block_agreement:disabled + .enter-block_agreement-text:before {
+    background: #eee;
+    color: #aaa;
+}
+
+.enter-block_agreement-text {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    color: #6C7275;
+}
+
+.enter-block_agreement-link {
+    font-weight: 600;
+    color: black;
+}
+
+.enter-block_button {
+    padding: 10px 40px 10px 40px;
+    border: 0;
+    border-radius: 8px;
+    height: 48px;
+    color: white;
+    background-color: black;
+}
+
+@media only screen and (max-width: 1080px){
+
+}
