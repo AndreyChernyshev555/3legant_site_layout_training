@@ -7,6 +7,24 @@
     width: 1440px;
     padding-left: 240px;
 }
+.enter-page_logo {
+    position: relative;
+    text-align: center;
+    color: black;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+}
+.enter-page_logo-text {
+    position: absolute;
+    top: 3%;
+    left: 40%;
+}
+.enter-page_img-top {
+    display: none;
+}
 .enter-block {
     display: flex;
     flex-direction: column;
@@ -51,30 +69,19 @@
     height: 40px;
 }
 
-.enter-block_agreement[type="checkbox"] {
-    display: none;
+.enter-block_agreement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.75%;
 }
 
-.enter-block_agreement-text:before {
-    content: " ";
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    border: 1.5px solid #6C7275;
-    border-radius: 4px;
-    border-image: initial;
-    margin-right: 8px;
-    text-align: center;
-    vertical-align: top;
-}
-
-.enter-block_agreement:checked + .enter-block_agreement-text:before {
-    content: "✔";
-}
-
-.enter-block_agreement:disabled + .enter-block_agreement-text:before {
-    background: #eee;
-    color: #aaa;
+.enter-block_agreement-box {
+    width: 5.3%;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .enter-block_agreement-text {
@@ -84,6 +91,7 @@
     line-height: 26px;
     text-align: left;
     color: #6C7275;
+    width: 350px;
 }
 
 .enter-block_agreement-link {
@@ -92,14 +100,66 @@
 }
 
 .enter-block_button {
-    padding: 10px 40px 10px 40px;
+    padding: 2% 8% 2% 8%;
     border: 0;
     border-radius: 8px;
-    height: 48px;
+    height: 7%;
     color: white;
     background-color: black;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.enter-block_button:hover {
+    background-color: #7D542E;
 }
 
 @media only screen and (max-width: 1080px){
-
+    .enter-page {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+    }
+    .enter-page_img-top {
+        display: block;
+        width: 100%;
+    }
+    .enter-page_img-left {
+        display: none;
+    }
+    .enter-page_logo {
+        font-size: 96px;
+    }
+    .enter-page_logo-text {
+        position: absolute;
+        top: 10%;
+        left: 30%;
+    }
+    .enter-block {
+        width: auto;
+        padding: 8%;
+        font-size: 48px;
+        gap: 96px;
+    }
+    .enter-block_head {
+        gap: 96px;
+    }
+    .enter-block_head-text {
+        font-size: 48px;
+    }
+    .enter-block_head-title {
+        font-size: 96px;
+    }
+    .enter-block_form-field {
+        padding-top: 1%;
+        font-size: 48px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+    .enter-block_agreement-text {
+        font-size: 36px;
+    }
+    .enter-block_button {
+        font-size: 48px;
+    }
 }

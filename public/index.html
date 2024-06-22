@@ -12,7 +12,11 @@
 </head>
 <body class="margin-zero">
     <div class="enter-page">
-        <img class="enter-page_img" src="img/main_img_left.png">
+        <div class="enter-page_logo">
+            <img class="enter-page_img-left" src="img/main_img_left.png">
+            <img class="enter-page_img-top" src="img/main_img_top.png">
+            <div class="enter-page_logo-text">3legant.</div>
+        </div>
         <div class="enter-block">
             <div class="enter-block_head">
                 <span class="enter-block_head-title">Sign up</span>
@@ -34,23 +38,25 @@
                 <input 
                        class="enter-block_form-field" 
                        placeholder="Password" />
-                <input 
-                       class="enter-block_agreement"
-                       type="checkbox"
-                       id="agreement"
-                       names="agreement"
-                />
-                <label class="enter-block_agreement-text"
-                       for="agreement">
-                    I agree with 
-                    <a class="enter-block_agreement-link">
-                        Privacy Policy
-                    </a>
-                    and 
-                    <a class="enter-block_agreement-link">
-                        Terms of Use
-                    </a>
-                </label>
+                <div class="enter-block_agreement">
+                    <input 
+                        class="enter-block_agreement-box"
+                        type="checkbox"
+                        id="agreement"
+                        names="agreement"
+                    />
+                    <label class="enter-block_agreement-text"
+                        for="agreement">
+                        I agree with 
+                        <a class="enter-block_agreement-link">
+                            Privacy Policy
+                        </a>
+                        and 
+                        <a class="enter-block_agreement-link">
+                            Terms of Use
+                        </a>
+                    </label>
+                </div>
             </form>
             <button class="enter-block_button">Sign up</button>
         </div>
