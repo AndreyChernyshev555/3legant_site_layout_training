@@ -1,0 +1,117 @@
+$offer-background: #F3F5F7;
+$secondary-color: #6C7275;
+$secondary-label: #343839;
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.thin {
+    width: 58.3%;
+    padding-left: 20.85%;
+}
+
+.margin-zero{
+    margin: 0;
+}
+
+.page {
+    width: 75%;
+    margin-left: 12.5%;
+}
+.offer {
+    @extend .flex-row;
+    align-items: center;
+    background: $offer-background;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    height: 40px;
+}
+.offer_center {
+    @extend .offer;
+    width: 25%;
+}
+.offer_close {
+    font-size: 28px;
+    font-weight: 300;
+}
+.head {
+    @extend .flex-row, .thin;
+    align-items: center;
+    height: 60px;
+}
+.head_logo {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+}
+.head_section-block {
+    @extend .flex-row;
+    gap: 40px;
+    font-family: Space Grotesk;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+}
+.head_section {
+    color: $secondary-color;
+}
+.head_buttons-block {
+    @extend .flex-row;
+    gap: 16px;
+}
+.slider {
+    @extend .thin;
+}
+.slide_img {
+    width: 100%;
+}
+.slide_button-left {
+    position: absolute;
+    top: 35.5%;
+    left: 21.5%;
+}
+.slide_button-right {
+    position: absolute;
+    top: 35.5%;
+    right: 21.5%;
+}
+.description {
+    @extend .flex-row, .thin;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.description_item1 {
+    font-family: Poppins;
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 76px;
+    letter-spacing: -2px;
+    text-align: left;
+}
+.description_back {
+    color: $secondary-color;
+}
+.description_item2 {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    color: $secondary-color;
+    padding-right: 48px;
+}
+.description_label {
+    font-weight: 600;;
+    color: $secondary-label;
+}
+.rooms-cards {
+    @extend .thin, .flex-row;
+}
