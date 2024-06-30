@@ -480,3 +480,119 @@ $blue-accent: #377DFF;
     flex-direction: row;
     gap: 24px;
 }
+
+@media screen and (max-width: 1440px) {
+    .offer {
+        padding: 0;
+    }
+    .offer_center{
+        width: 90%;
+        gap: 2%;
+    }
+    .page {
+        width: 100%;
+        margin: 0;
+    }
+    .head_section-block {
+        display: none;
+    }
+    .slide_button-left {
+        top: 20%;
+        left: 10%;
+    }
+    .slide_button-right {
+        top: 20%;
+        right: 10%;
+    }
+    .description {
+        flex-direction: column;
+    }
+    .description_item1 {
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: -0.4px;
+    }
+    .description_item2 {
+        font-size: 14px;
+        line-height: 22px;
+        padding-right: 0;
+    }
+    .rooms-cards {
+        flex-direction: column;
+    }
+    .rooms-cards_img {
+        width: 100%;
+    }
+    .new-arrivals_text-item2 {
+        display: none;
+    }
+    .pros {
+        padding: 48px;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    .pros_item {
+        width: 45%;
+        height: fit-content;
+        padding: 0;
+    }
+    .info2 {
+        flex-direction: column;
+    }
+    .info2_offer {
+        padding: 10% 5% 5% 5%;
+        width: auto;
+    }
+    .articles {
+        padding: 5%;
+    }
+    .articles_block {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .newsletter {
+        background: #F2F4F6;
+    }
+    .newsletter_img {
+        display: none;
+    }
+    .newsletter_block {
+        position: static;
+        top: 0;
+        left: 0;
+        width: auto;
+        padding: 5%;
+    }
+    .footer {
+        padding: 5%;
+        background: #232627;
+    }
+    .footer_navigation, .footer_company{
+        flex-direction: column;
+    }
+    .footer_company-logo {
+        text-align: center;
+        padding-right: 0;
+        padding-bottom: 10px;
+        border-right: 0;
+        border-bottom: solid 0.5px #6C7275;
+    }
+    .footer_company-caption {
+        padding: 10px 0px 0px 0px;
+        text-align: center;
+    }
+    .footer_nav-buttons {
+        padding-top: 40px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer_sources {
+        gap: 20px;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .footer_copyright {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+}
