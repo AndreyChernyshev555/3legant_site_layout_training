@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3legant</title>
-    <link rel="stylesheet" type="text/css" href="home_page1.css" />
+    <!--<link rel="stylesheet" type="text/css" href="home_page1.css" />-->
+    <script src="dist/bundle.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -16,54 +17,314 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body class="margin-zero">
-    <div class="page">
-        <div class="offer">
-            <div></div>
-            <div class="offer_center">
-                <img class="offer_img" src="img/offer.svg">
-                <span class="offer_text">30% off storewide — Limited time!</span>
-                <a class="offer_link" href="index.html">Shop now &#8594;</a>
+    <div class="offer" id="offer1">
+        <div></div>
+        <div class="offer_center">
+            <img class="offer_img" src="img/offer.svg">
+            <span class="offer_text">30% off storewide — Limited time!</span>
+            <a class="offer_link" href="index.html">Shop now &#8594;</a>
+        </div>
+        <span class="offer_close">×</span>
+    </div>
+    <div class="page"> 
+        <div class="head">
+            <div class="head_logo">3legant.</div>
+            <div class="head_section-block">
+                <span class="head_main-section">Home</span>
+                <span class="head_section">Shop</span>
+                <span class="head_section">Product</span>
+                <span class="head_section">Contact us</span>
             </div>
-            <span class="offer_close">×</span>
-        </div>
-    </div>
-    <div class="head">
-        <div class="head_logo">3legant.</div>
-        <div class="head_section-block">
-            <span class="head_main-section">Home</span>
-            <span class="head_section">Shop</span>
-            <span class="head_section">Product</span>
-            <span class="head_section">Contact us</span>
-        </div>
-        <div class="head_buttons-block">
-            <img class="head_button" src="img/search.svg">
-            <img class="head_button" src="img/user.svg">
-            <img class="head_button" src="img/cart.svg">
-        </div>
-    </div>
-    <div class="slider">
-        <img class="slide_img" src="img/home_page_slide.png">
-        <img class="slide_button-left" src="img/slide_left.svg">
-        <img class="slide_button-right" src="img/slide_right.svg">
-    </div>
-    <div class="description">
-        <div class="description_item1">
-            Simply Unique<span class="description_back">/</span> Simply Better.
-        </div>
-        <div class="description_item2">
-            <span class="description_label">3legant</span> is a gift & decorations store based in HCMC, Vietnam. Est since 2019.
-        </div>
-    </div>
-    <div class="rooms-cards">
-        <div class="rooms-cards_main">
-            <img class="rooms-cards_main-img" src="img/living_room.png">
-        </div>
-        <div class="rooms-cards_sub">
-            <div class="rooms-cards_sub-item1">
-                <img class="rooms-cards_sub-img1" src="img/bedroom.png">
+            <div class="head_buttons-block">
+                <img class="head_button" src="img/search.svg">
+                <img class="head_button" src="img/user.svg">
+                <img class="head_button" src="img/cart.svg">
             </div>
-            <div class="rooms-cards_sub-item2">
-                <img class="rooms-cards_sub-img2" src="img/kitchen.png">
+        </div>
+        <div class="slider">
+            <img class="slide_img" src="img/home_page_slide.png">
+            <div class="slide_button-left">
+                <img src="img/slide_left.svg">
+            </div>
+            <div class="slide_button-right">
+                <img src="img/slide_right.svg">
+            </div>
+        </div>
+        <div class="description">
+            <div class="description_item1">
+                Simply Unique<span class="description_back">/</span> Simply Better.
+            </div>
+            <div class="description_item2">
+                <span class="description_label">3legant</span> is a gift & decorations store based in HCMC, Vietnam. Est since 2019.
+            </div>
+        </div>
+        <div class="rooms-cards">
+            <div class="rooms-cards_main">
+                <img class="rooms-cards_main-img" src="img/living_room.png">
+            </div>
+            <div class="rooms-cards_sub">
+                <div class="rooms-cards_sub-item1">
+                    <img class="rooms-cards_sub-img1" src="img/bedroom.png">
+                </div>
+                <div class="rooms-cards_sub-item2">
+                    <img class="rooms-cards_sub-img2" src="img/kitchen.png">
+                </div>
+            </div>
+        </div>
+        <div class="new-arrivals">
+            <div class="new-arrivals_text">
+                <div class="new-arrivals_text-item1">New arrivals</div>
+                <a class="new-arrivals_text-item2" href="dzen.ru">More products &#8594;</a>
+            </div>
+            <div class="new-arrivals_goods">
+                <div class="new-arrivals_goods-item">
+                    <div class="new-arrivals_img">
+                        <div class="new-arrivals_img-info">
+                            <div class="new-arrivals_new">NEW</div>
+                            <div class="new-arrivals_discount">-50%</div>
+                        </div>
+                        <img class="new-arrivals_goods-img" src="img/furniture/sofa.png">
+                    </div>
+                    <div class="new-arrivals_description">
+                        <span class="new-arrivals_rating">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                        </span>
+                        <span class="new-arrivals_name">Loveseat Sofa</span>
+                        <div class="new-arrivals_price">
+                            <span class="new-arrivals_price-act">$199.00</span>
+                            <span class="new-arrivals_price-old">$400.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-arrivals_goods-item">
+                    <div class="new-arrivals_img">
+                        <div class="new-arrivals_img-info">
+                            <div class="new-arrivals_new">NEW</div>
+                            <div class="new-arrivals_discount">-50%</div>
+                        </div>
+                        <img class="new-arrivals_goods-img" src="img/furniture/lamp.png">
+                    </div>
+                    <div class="new-arrivals_description">
+                        <span class="new-arrivals_rating">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                        </span>
+                        <span class="new-arrivals_name">Table Lamp</span>
+                        <div class="new-arrivals_price">
+                            <span class="new-arrivals_price-act">$24.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-arrivals_goods-item">
+                    <div class="new-arrivals_img">
+                        <div class="new-arrivals_img-info">
+                            <div class="new-arrivals_new">NEW</div>
+                            <div class="new-arrivals_discount">-50%</div>
+                        </div>
+                        <img class="new-arrivals_goods-img" src="img/furniture/beige_lamp.png">
+                    </div>
+                    <div class="new-arrivals_description">
+                        <span class="new-arrivals_rating">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                        </span>
+                        <span class="new-arrivals_name">Beige Table Lamp</span>
+                        <div class="new-arrivals_price">
+                            <span class="new-arrivals_price-act">$24.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-arrivals_goods-item">
+                    <div class="new-arrivals_img">
+                        <div class="new-arrivals_img-info">
+                            <div class="new-arrivals_new">NEW</div>
+                            <div class="new-arrivals_discount">-50%</div>
+                        </div>
+                        <img class="new-arrivals_goods-img" src="img/furniture/cart.png">
+                    </div>
+                    <div class="new-arrivals_description">
+                        <span class="new-arrivals_rating">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                        </span>
+                        <span class="new-arrivals_name">Bamboo basket</span>
+                        <div class="new-arrivals_price">
+                            <span class="new-arrivals_price-act">$$24.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-arrivals_goods-item">
+                    <div class="new-arrivals_img">
+                        <div class="new-arrivals_img-info">
+                            <div class="new-arrivals_new">NEW</div>
+                            <div class="new-arrivals_discount">-50%</div>
+                        </div>
+                        <img class="new-arrivals_goods-img" src="img/furniture/toster.png">
+                    </div>
+                    <div class="new-arrivals_description">
+                        <span class="new-arrivals_rating">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                            <img src="img/star.svg">
+                        </span>
+                        <span class="new-arrivals_name">Toaster</span>
+                        <div class="new-arrivals_price">
+                            <span class="new-arrivals_price-act">$224.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pros">
+            <div class="pros_item">
+                <img class="pros_ico" src="img/icons/fast_delivery.svg">
+                <div class="pros_text">
+                    <span class="pros_main">
+                        Free Shipping
+                    </span>
+                    <span class="pros_sub">
+                        Order above $200
+                    </span>
+                </div>
+            </div>
+            <div class="pros_item">
+                <img class="pros_ico" src="img/icons/money.svg">  
+                <div class="pros_text">
+                    <span class="pros_main">
+                        Money-back
+                    </span>
+                    <span class="pros_sub">
+                        30 days guarantee
+                    </span>
+                </div>           
+            </div>
+            <div class="pros_item">
+                <img class="pros_ico" src="img/icons/lock.svg">   
+                <div class="pros_text">
+                    <span class="pros_main">
+                        Secure Payments
+                    </span>
+                    <span class="pros_sub">
+                        Secured by Stripe
+                    </span>
+                </div>             
+            </div>
+            <div class="pros_item">
+                <img class="pros_ico" src="img/icons/call.svg">
+                <div class="pros_text">
+                    <span class="pros_main">
+                        24/7 Support
+                    </span>
+                    <span class="pros_sub">
+                        Phone and Email support
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="info2">
+            <img src="img/paste1.png">
+            <div class="info2_offer">
+                <div class="info2_offer-sale-up">SALE UP TO 35% OFF</div>
+                <div class="info2_offer-head">HUNDREDS of New lower prices!</div>
+                <div class="info2_offer-desc">
+                    It’s more affordable 
+                    than ever to give every room in your home
+                     a stylish makeover</div>
+                <div class="info2_offer-link">
+                    <a href="dzen.ru">Shop Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+        <div class="articles">
+            <div class="articles_header">Articles</div>
+            <div class="articles_block">
+                <div class="articles_item">
+                    <img class="articles_img" src="img/articles/article1.png">
+                    <span class="articles_name">7 ways to decor your home</span>
+                    <a class="articles_read" href="dzen.ru">Read More &#8594;</a>
+                </div>
+                <div class="articles_item">
+                    <img class="articles_img" src="img/articles/article2.png">
+                    <span class="articles_name">Kitchen organization</span>
+                    <a class="articles_read" href="dzen.ru">Read More &#8594;</a>
+                </div>
+                <div class="articles_item">
+                    <img class="articles_img" src="img/articles/article3.png">
+                    <span class="articles_name">Decor your bedroom</span>
+                    <a class="articles_read" href="dzen.ru">Read More &#8594;</a>
+                </div>
+            </div>
+        </div>
+        <div class="newsletter">
+            <img src="img/newsletter.png">
+            <div class="newsletter_block">
+                <div class="newsletter_text">
+                    <div class="newsletter_header">
+                        Join Our Nesletter
+                    </div>
+                    <div class="newsletter_desc">
+                        Sign up for deals, new products and promotions
+                    </div>
+                </div>
+                <div class="newsletter_form">
+                    <span class="newsletter_form-left">
+                        <img src="img/email.svg">
+                        Email adress
+                    </span>
+                    <span class="newsletter_form-right">Signup</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_navigation">
+                <div class="footer_company">
+                    <div class="footer_company-logo">
+                        3legant<span style="color: #6C7275">.</span>
+                    </div>
+                    <div class="footer_company-caption">
+                        Gift & Decoration Store
+                    </div>
+                </div>
+                <div class="footer_nav-buttons">
+                    <a href="dzen.ru">Home</a>
+                    <a href="dzen.ru">Shop</a>
+                    <a href="dzen.ru">Product</a>
+                    <a href="dzen.ru">Blog</a>
+                    <a href="dzen.ru">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer_sources">
+                <div class="footer_copyright">
+                    <div class="footer_copyright-text">
+                        Copyright © 2023 3legant. All rights reserved
+                    </div>
+                    <div class="footer_copyright-policy">
+                        Privacy Policy
+                    </div>
+                    <div class="footer_copyright-terms">
+                        Terms of Use
+                    </div>
+                </div>
+                <div class="footer_social">
+                    <img src="img/icons/instagram.svg">
+                    <img src="img/icons/facebook.svg">
+                    <img src="img/icons/youtube.svg">
+                </div>
             </div>
         </div>
     </div>

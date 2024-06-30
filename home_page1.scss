@@ -1,15 +1,18 @@
-$offer-background: #F3F5F7;
+$info-background: #F3F5F7;
 $secondary-color: #6C7275;
 $secondary-label: #343839;
-.flex-row {
+$discount-color: #38CB89;
+$blue-accent: #377DFF;
+@mixin flex-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
 }
 
-.thin {
-    width: 58.3%;
-    padding-left: 20.85%;
+@mixin thin {
+    width: 77.7%;
+    padding-left: 11.15%;
+    padding-right: 11.15%;
 }
 
 .margin-zero{
@@ -20,15 +23,17 @@ $secondary-label: #343839;
     width: 75%;
     margin-left: 12.5%;
 }
+
 .offer {
-    @extend .flex-row;
+    @include flex-row;
     align-items: center;
-    background: $offer-background;
+    background: $info-background;
     font-family: Inter;
     font-size: 14px;
     font-weight: 600;
     line-height: 22px;
     height: 40px;
+    padding: 0% 12.5% 0% 12.5%;
 }
 .offer_center {
     @extend .offer;
@@ -39,7 +44,8 @@ $secondary-label: #343839;
     font-weight: 300;
 }
 .head {
-    @extend .flex-row, .thin;
+    @include flex-row;
+    @include thin;
     align-items: center;
     height: 60px;
 }
@@ -51,7 +57,7 @@ $secondary-label: #343839;
     text-align: center;
 }
 .head_section-block {
-    @extend .flex-row;
+    @include flex-row;
     gap: 40px;
     font-family: Space Grotesk;
     font-size: 14px;
@@ -63,27 +69,31 @@ $secondary-label: #343839;
     color: $secondary-color;
 }
 .head_buttons-block {
-    @extend .flex-row;
+    @include flex-row;
     gap: 16px;
 }
 .slider {
-    @extend .thin;
+    @include thin;
+    position: relative;
 }
 .slide_img {
     width: 100%;
 }
 .slide_button-left {
     position: absolute;
+    width: 84px;
     top: 35.5%;
-    left: 21.5%;
+    left: 13%;
 }
 .slide_button-right {
     position: absolute;
+    width: 84px;
     top: 35.5%;
-    right: 21.5%;
+    right: 13%;
 }
 .description {
-    @extend .flex-row, .thin;
+    @include flex-row;
+    @include thin;
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -109,9 +119,364 @@ $secondary-label: #343839;
     padding-right: 48px;
 }
 .description_label {
-    font-weight: 600;;
+    font-weight: 600;
     color: $secondary-label;
 }
 .rooms-cards {
-    @extend .thin, .flex-row;
+    @include flex-row;
+    @include thin;
+}
+
+.new-arrivals {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 48px;
+    padding-top: 48px;
+    @include thin;
+}
+
+.new-arrivals_img {
+    position: relative;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.new-arrivals_img-info {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.new-arrivals_new {
+    text-align: center;
+    padding: 4px 14px 4px 14px;
+    margin-bottom: 4px;
+    width: 43px;
+}
+
+.new-arrivals_discount {
+    background-color: $discount-color;
+    color: white;
+    border-radius: 4px;
+    @extend .new-arrivals_new;
+}
+
+.new-arrivals_text {
+    @include flex-row;
+    align-items: end;
+    font-weight: 500;
+    letter-spacing: -0.4;
+}
+
+.new-arrivals_text-item1 {
+    width: 20%;
+    font-family: Poppins;
+    font-size: 40px;
+    line-height: 44px;
+}
+
+.new-arrivals_text-item2 {
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 28px;
+    &:link {
+        color: black;
+    }
+    &:visited {
+        color: $secondary-color;
+    }
+}
+
+.new-arrivals_goods {
+    @include flex-row;
+    gap: 24px;
+    overflow-x: scroll;
+    padding-bottom: 48px;
+}
+
+.new-arrivals_goods-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.new-arrivals_description {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: Inter;
+    font-weight: 600;
+}
+
+.new-arrivals_name {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.new-arrivals_price {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.new-arrivals_price-old {
+    color: $secondary-color;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.pros {
+    @include flex-row;
+    padding: 48px 160px 48px 160px;
+    gap: 24px;
+}
+
+.pros_item {
+    background-color: $info-background;
+    width: 198px;
+    height: 130px;
+    padding: 48px 32px 48px 32px;
+    font-family: Poppins;
+}
+
+.pros_text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    gap: 8px;
+}
+
+.pros_main {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.pros_sub {
+    color: $secondary-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.info2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.info2_offer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 30%;
+    background-color: $info-background;
+    padding: 100px 160px 100px 72px;
+}
+.info2_offer-sale-up {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $blue-accent;
+}
+.info2_offer-head {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.4px;
+}
+.info2_offer-desc {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+}
+.info2_offer-link {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.4;
+    a:link {
+        color: black;
+    }
+    a:visited {
+        color: $secondary-color;
+    }
+}
+.articles {
+    padding: 80px 160px 80px 160px;
+}
+.articles_header {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.4;
+    padding-bottom: 40px;
+}
+.articles_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.articles_item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.articles_name {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+}
+.articles_read {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.4;
+    &:link {
+        color: black;
+    }
+    &:visited {
+        color: $secondary-color;
+    }
+}
+.newsletter {
+    position: relative;
+}
+.newsletter_block {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    text-align: center;
+    width: 34%;
+}
+.newsletter_text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.newsletter_header {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.4;
+}
+.newsletter_desc {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+.newsletter_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 0.5px #AFB3B5;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.4;
+    color: $secondary-color;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 160px 32px 160px;
+    gap: 49px;
+    color: white;
+    background-color: #141718;
+}
+
+.footer_company {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer_company-logo {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-right: 30px;
+    border-right: solid 0.5px #6C7275;
+}
+
+.footer_company-caption {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    padding-left: 30px;
+}
+
+.footer_nav-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    a:link {
+        color: white;
+        text-decoration: none;
+    }
+    a:visited {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.footer_sources {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: solid 0.5px #404446;
+    padding-top: 15px;
+}
+
+.footer_copyright {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.footer_copyright-text {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.footer_social {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
 }
