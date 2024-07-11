@@ -5,7 +5,7 @@ import Head from "./Head.jsx";
 import Slider from "./Slider.jsx";
 import Description from "./Description.jsx";
 import RoomsCards from "./RoomsCards.jsx";
-import NewArrivals from "./NewArrivals.jsx";
+import NewArrivals from "./NewArrivals/NewArrivals.jsx";
 import Pros from "./Pros.jsx";
 import Info2 from "./Info2.jsx";
 import Articles from "./Articles/Articles.jsx";
