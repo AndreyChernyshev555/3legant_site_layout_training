@@ -3,6 +3,7 @@ $secondary-color: #6C7275;
 $secondary-label: #343839;
 $discount-color: #38CB89;
 $blue-accent: #377DFF;
+
 @mixin flex-row {
     display: flex;
     flex-direction: row;
@@ -10,7 +11,6 @@ $blue-accent: #377DFF;
 }
 
 @mixin thin {
-    width: 77.7%;
     padding-left: 11.15%;
     padding-right: 11.15%;
 }
@@ -51,13 +51,15 @@ $blue-accent: #377DFF;
     @include thin;
     align-items: center;
     height: 60px;
+    width: 77.7%;
+    line-height: 24px;
+    text-align: center;
 }
 .head_logo {
     font-family: Poppins;
     font-size: 24px;
     font-weight: 500;
     line-height: 24px;
-    text-align: center;
 }
 .head_section-block {
     @include flex-row;
@@ -168,7 +170,8 @@ $blue-accent: #377DFF;
     background-color: $discount-color;
     color: white;
     border-radius: 4px;
-    @extend .new-arrivals_new;
+    padding: 4px 14px 4px 14px;
+    margin-bottom: 4px;
 }
 
 .new-arrivals_text {
@@ -240,13 +243,12 @@ $blue-accent: #377DFF;
 .pros {
     @include flex-row;
     padding: 48px 160px 48px 160px;
-    gap: 24px;
+    gap: 1.66%;
 }
 
 .pros_item {
     background-color: $info-background;
-    width: 198px;
-    height: 130px;
+    width: 36.4%;
     padding: 48px 32px 48px 32px;
     font-family: Poppins;
 }
