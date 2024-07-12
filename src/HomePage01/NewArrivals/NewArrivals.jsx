@@ -1,7 +1,7 @@
 import React from "react";
 import NewArrivalsItem from "./NewArrivalsItem.jsx";
 
-export default function NewArrivals() {
+export default function NewArrivals(props) {
   return (
     <div className="new-arrivals">
       <div className="new-arrivals_text">
@@ -42,24 +42,28 @@ export default function NewArrivals() {
           rating={1}
           goods={"Table Lamp"}
           price={"$24.99"}
+          addFunc={props.addFunc}
         />
         <NewArrivalsItem
           path={"../public/furniture/beige_lamp.png"}
           rating={4}
           goods={"Beige Table Lamp"}
           price={"$24.99"}
+          addFunc={props.addFunc}
         />
         <NewArrivalsItem
           path={"../public/furniture/cart.png"}
           rating={5}
           goods={"Bamboo basket"}
           price={"$24.99"}
+          addFunc={props.addFunc}
         />
         <NewArrivalsItem
           path={"../public/furniture/toster.png"}
           rating={3}
           goods={"Toaster"}
-          price={"$224.999"}
+          price={"$224.99"}
+          addFunc={props.addFunc}
         />
       </div>
     </div>

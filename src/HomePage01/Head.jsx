@@ -1,6 +1,7 @@
 import React from "react";
+import HeadIndicator from "./HeadIndicator.jsx";
 
-export default function Head() {
+export default function Head(props) {
   return (
     <div className="head">
       <div className="head_logo">3legant.</div>
@@ -13,7 +14,12 @@ export default function Head() {
       <div className="head_buttons-block">
         <img className="head_button" src="../public/search.svg" />
         <img className="head_button" src="../public/user.svg" />
-        <img className="head_button" src="../public/cart.svg" />
+        <div className="head_cart">
+          <img className="head_button" src="../public/cart.svg" />
+          <HeadIndicator
+            amount={props.amount}
+          />
+        </div>
       </div>
     </div>
   );

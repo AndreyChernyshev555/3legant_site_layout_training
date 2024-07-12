@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./HomePage01.scss";
 import Offer from "./Offer/Offer.jsx";
 import Head from "./Head.jsx";
@@ -13,15 +13,21 @@ import Newsletter from "./Newsletter.jsx";
 import Footer from "./Footer.jsx";
 
 export default function HomePage01() {
+  const [cartItems, setCartItems] = useState(0);
+  const handleClick = () => setCartItems(cartItems => (cartItems + 1));
   return (
     <div>
       <Offer offerText={"30% off storewide — Limited time!"} />
       <div className="page">
-        <Head />
+        <Head 
+          amount={cartItems}
+        />
         <Slider />
         <Description />
         <RoomsCards />
-        <NewArrivals />
+        <NewArrivals 
+          addFunc={handleClick}
+        />
         <Pros />
         <Info2 />
         <Articles />
