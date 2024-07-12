@@ -4,14 +4,26 @@ export default function RoomsCards() {
   return (
     <div className="rooms-cards">
       <div className="rooms-cards_main">
-        <img className="rooms-cards_img" src="../public/living_room.png" />
+        <div className="rooms-cards_main-text">
+          <div>Living Room</div>
+          <div className="rooms-cards_link">Shop Now</div>
+        </div>
+        <img className="rooms-cards_img" src="../public/living_room.svg" />
       </div>
       <div className="rooms-cards_sub">
-        <div className="rooms-cards_sub-item1">
-          <img className="rooms-cards_img" src="../public/bedroom.png" />
+        <div className="rooms-cards_sub-item">
+          <div className="rooms-cards_sub-text">
+            <div>Bedroom</div>
+            <div className="rooms-cards_link">Shop Now</div>
+          </div>
+          <img className="rooms-cards_img" src="../public/bedroom.svg" />
         </div>
-        <div className="rooms-cards_sub-item2">
-          <img className="rooms-cards_img" src="../public/kitchen.png" />
+        <div className="rooms-cards_sub-item">
+          <div className="rooms-cards_sub-text">
+            <div>Kitchen</div>
+            <div className="rooms-cards_link">Shop Now</div>
+          </div>
+          <img className="rooms-cards_img" src="../public/kitchen.svg" />
         </div>
       </div>
     </div>
