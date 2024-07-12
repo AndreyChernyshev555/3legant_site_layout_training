@@ -285,7 +285,13 @@ $blue-accent: #377dff;
   color: $info-background;
   width: 90%;
   height: 12.5%;
-  transition: opacity 150ms;
+  transition: opacity 200ms, background-color 600ms;
+  &:hover {
+    background-color: #3b3f41;
+  }
+  &:active {
+    background-color: #acb6bb;
+  }
 }
 
 .new-arrivals_text-item2 {
