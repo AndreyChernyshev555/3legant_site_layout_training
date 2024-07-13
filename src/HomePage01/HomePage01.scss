@@ -108,7 +108,28 @@ $blue-accent: #377dff;
 .slide_img {
   width: 100%;
 }
-
+.slide_carousel-imgs {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  transition: transform 1s cubic-bezier(0.37, 0, 0.63, 1);
+}
+.slide_filter-left {
+  background-color: white;
+  width: 27.8%;
+  height: 1120px;
+  position: absolute;
+  margin-left: -27.8%;
+  z-index: 10;
+}
+.slide_filter-right {
+  background-color: white;
+  width: 27.8%;
+  height: 1120px;
+  position: absolute;
+  margin-left: 78%;
+  z-index: 10;
+}
 @mixin slide_button {
   align-content: bottom;
   position: absolute;
