@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./HomePage01.scss";
 import Offer from "./Offer/Offer.jsx";
 import Head from "./Head.jsx";
-import Slider from "./Slider.jsx";
+import Slider from "./Slider/Slider.jsx";
 import Description from "./Description.jsx";
 import RoomsCards from "./RoomsCards.jsx";
 import NewArrivals from "./NewArrivals/NewArrivals.jsx";

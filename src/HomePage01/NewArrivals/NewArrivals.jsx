@@ -11,6 +11,10 @@ export default function NewArrivals(props) {
         </a>
       </div>
       <div className="new-arrivals_goods">
+        {/*ВОТ ЭТОТ МИКРОЧЕЛ ДО СИХ ПОР НЕ КОМПОНЕНТ
+          НАДО ЗАМЕНИТЬ
+          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        */}
         <div className="new-arrivals_goods-item">
           <div className="new-arrivals_img">
             <div className="new-arrivals_img-info">

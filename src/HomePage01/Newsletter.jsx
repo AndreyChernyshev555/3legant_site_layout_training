@@ -3,7 +3,6 @@ import React from "react";
 export default function Newsletter() {
   return (
     <div className="newsletter">
-      <img className="newsletter_img" src="../public/newsletter.png" />
       <div className="newsletter_block">
         <div className="newsletter_text">
           <div className="newsletter_header">Join Our Nesletter</div>
