@@ -106,19 +106,17 @@ $blue-accent: #377dff;
   position: relative;
   overflow: hidden;
 }
-.slide_img {
-  width: 100%;
-}
 .slide_carousel-imgs {
   display: flex;
   flex-direction: row;
   justify-content: start;
+  flex-shrink: 0;
   transition: transform 1s cubic-bezier(0.37, 0, 0.63, 1);
 }
 .slide_filter-left {
   background-color: white;
   width: 27.8%;
-  height: 1120px;
+  height: 560px;
   position: absolute;
   margin-left: -27.8%;
   z-index: 10;
@@ -126,7 +124,7 @@ $blue-accent: #377dff;
 .slide_filter-right {
   background-color: white;
   width: 27.8%;
-  height: 1120px;
+  height: 560px;
   position: absolute;
   margin-left: 78%;
   z-index: 10;
@@ -541,17 +539,37 @@ $blue-accent: #377dff;
 .newsletter_form {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
   border-bottom: solid 0.5px #afb3b5;
   padding-top: 20px;
   padding-bottom: 10px;
+  color: $secondary-color;
+  width: 100%;
+}
+
+.newsletter_form-left {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5%;
+  width: 85%;
+}
+
+.newsletter_form-right{
+  width: 15%;
+}
+
+.newsletter_form-input {
+  border: 0;
   font-family: Inter;
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
-  letter-spacing: -0.4;
-  color: $secondary-color;
-  width: 100%;
+  letter-spacing: -0.4px;
+  width: 90%;
+  background-color: rgba(0,0,0,0);
+  &:focus {
+    outline: none;
+  }
 }
 
 .footer {
@@ -640,7 +658,7 @@ $blue-accent: #377dff;
   gap: 24px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1440px) and (orientation: portrait) {
   .offer {
     padding: 0;
   }
@@ -655,13 +673,12 @@ $blue-accent: #377dff;
   .head_section-block {
     display: none;
   }
-  .slide_button-left {
-    top: 20%;
-    left: 10%;
-  }
-  .slide_button-right {
-    top: 20%;
-    right: 10%;
+  .slider {
+    padding: 0;
+    margin-right: 11.1%;
+    margin-left: 11.1%;
+    height: 720px;
+    width: 346px;
   }
   .description {
     flex-direction: column;
@@ -714,8 +731,6 @@ $blue-accent: #377dff;
   .articles_block {
     flex-direction: column;
     gap: 20px;
-  }
-  .newsletter {
   }
   .newsletter_img {
     display: none;

@@ -6,41 +6,19 @@ export default function NewArrivals(props) {
     <div className="new-arrivals">
       <div className="new-arrivals_text">
         <div className="new-arrivals_text-item1">New arrivals</div>
-        <a className="new-arrivals_text-item2" href="dzen.ru">
+        <a className="new-arrivals_text-item2" href="https://dzen.ru">
           More products &#8594;
         </a>
       </div>
       <div className="new-arrivals_goods">
-        {/*ВОТ ЭТОТ МИКРОЧЕЛ ДО СИХ ПОР НЕ КОМПОНЕНТ
-          НАДО ЗАМЕНИТЬ
-          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        */}
-        <div className="new-arrivals_goods-item">
-          <div className="new-arrivals_img">
-            <div className="new-arrivals_img-info">
-              <div className="new-arrivals_new">NEW</div>
-              <div className="new-arrivals_discount">-50%</div>
-            </div>
-            <img
-              className="new-arrivals_goods-img"
-              src="../public/furniture/sofa.png"
-            />
-          </div>
-          <div className="new-arrivals_description">
-            <span className="new-arrivals_rating">
-              <img src="../public/star.svg" />
-              <img src="../public/star.svg" />
-              <img src="../public/star.svg" />
-              <img src="../public/star.svg" />
-              <img src="../public/star.svg" />
-            </span>
-            <span className="new-arrivals_name">Loveseat Sofa</span>
-            <div className="new-arrivals_price">
-              <span className="new-arrivals_price-act">$199.00</span>
-              <span className="new-arrivals_price-old">$400.00</span>
-            </div>
-          </div>
-        </div>
+        <NewArrivalsItem 
+          path={"../public/furniture/sofa.png"}
+          rating={5}
+          goods={"Loveseat Sofa"}
+          price={"$199.00"}
+          addFunc={props.addFunc}
+          oldPrice={"$400.00"}
+        />
         <NewArrivalsItem
           path={"../public/furniture/lamp.png"}
           rating={1}

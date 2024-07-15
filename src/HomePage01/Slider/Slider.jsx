@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import useMediaQueries from "media-queries-in-react";
 import SlideIndicator from "./SlideIndicator.jsx";
+
+const proportion = 1120 / 1920;
 
 const images = [
   "../public/slider_images/home_page_slide1.png",
@@ -7,8 +10,6 @@ const images = [
   "../public/slider_images/home_page_slide3.jpg",
   "../public/slider_images/home_page_slide4.jpg",
 ];
-
-const imageList = images.map((image) => <img src={image} width="1120" />);
 
 export default function Slider() {
   const lastIndex = images.length - 1;
@@ -30,13 +31,49 @@ export default function Slider() {
     return () => clearInterval(interval);
   }, [currImg]);
 
+  const [size, setSize] = useState({
+    width: proportion * window.innerWidth,
+    height: 560*window.innerHeight/1080,
+  });
+
+  useEffect(() => {
+    const resize = () => {
+      setSize({
+        width: proportion * window.innerWidth,
+        height: 560*window.innerHeight/1080,
+      });
+    };
+    window.addEventListener("resize", resize);
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
+  const imageList = images.map((image) => (
+    <div
+      className="slide_carousel-imgs-item"
+      style={{
+        backgroundImage: `url(${image})`,
+        width: `${size.width}px`,
+        backgroundSize: "cover",
+      }}
+    />
+  ));
+
   return (
-    <div className="slider">
-      <div className="slide_filter-left"></div>
-      <div className="slide_filter-right"></div>
+    <div
+      className="slider"
+      style={{ width: `${size.width}px`, height: `${size.height}px` }}
+    >
+      <div className="slide_filter-left" style={{ height: `${size.height}px` }}></div>
+      <div className="slide_filter-right" style={{ height: `${size.height}px` }}></div>
       <div
         className="slide_carousel-imgs"
-        style={{ transform: `translateX(-${currImg * 1120}px)` }}
+        style={{
+          transform: `translateX(-${currImg * size.width}px)`,
+          width: `${size.width * 4}px`,
+          height: `${size.height}px`,
+        }}
       >
         {imageList}
       </div>
@@ -46,7 +83,7 @@ export default function Slider() {
       <div className="slide_button-right" onClick={rightClick}>
         <img src="../public/arrow-right.svg" />
       </div>
-      <SlideIndicator amount={4} light={currImg}/>
+      <SlideIndicator amount={4} light={currImg} />
     </div>
   );
 }

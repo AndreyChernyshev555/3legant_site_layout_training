@@ -11,10 +11,14 @@ export default function Newsletter() {
           </div>
         </div>
         <div className="newsletter_form">
-          <span className="newsletter_form-left">
+          <div className="newsletter_form-left">
             <img src="../public/email.svg" />
-            Email adress
-          </span>
+            <input
+              className="newsletter_form-input"
+              placeholder="Email adress"
+              type="email"
+            />
+          </div>
           <span className="newsletter_form-right">Signup</span>
         </div>
       </div>

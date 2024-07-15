@@ -35,6 +35,7 @@ export default function NewArrivalsItem(props) {
         <span className="new-arrivals_name">{props.goods}</span>
         <div className="new-arrivals_price">
           <span className="new-arrivals_price-act">{props.price}</span>
+          <span className="new-arrivals_price-old">{props.oldPrice}</span>
         </div>
       </div>
     </div>
