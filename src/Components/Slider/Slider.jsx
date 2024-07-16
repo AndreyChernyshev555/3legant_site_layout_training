@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import useMediaQueries from "media-queries-in-react";
 import SlideIndicator from "./SlideIndicator.jsx";
 
-const proportion = 1120 / 1920;
-
 const images = [
   "../public/slider_images/home_page_slide1.png",
   "../public/slider_images/home_page_slide2.jpg",
@@ -12,6 +10,22 @@ const images = [
 ];
 
 export default function Slider() {
+  // const mediaQueries = useMediaQueries({
+  //   narrow: "screen and (max-width: 1440px)",
+  //   portrait: "(orientation: portrait)",
+  // });
+
+  const widthProportion = window.matchMedia(
+    "screen and (max-width: 1440px) and (orientation: portrait)"
+  ).matches
+    ? 1
+    : 1120 / 1920;
+  const heightProportion = window.matchMedia(
+    "screen and (max-width: 1440px) and (orientation: portrait)"
+  ).matches
+    ? 720 / 1920
+    : 560 / 1080;
+
   const lastIndex = images.length - 1;
   const [currImg, setCurrImg] = useState(0);
   const leftClick = function () {
@@ -32,15 +46,15 @@ export default function Slider() {
   }, [currImg]);
 
   const [size, setSize] = useState({
-    width: proportion * window.innerWidth,
-    height: 560*window.innerHeight/1080,
+    width: widthProportion * window.innerWidth,
+    height: heightProportion * window.innerHeight,
   });
 
   useEffect(() => {
     const resize = () => {
       setSize({
-        width: proportion * window.innerWidth,
-        height: 560*window.innerHeight/1080,
+        width: widthProportion * window.innerWidth,
+        height: heightProportion * window.innerHeight,
       });
     };
     window.addEventListener("resize", resize);
@@ -55,6 +69,7 @@ export default function Slider() {
       style={{
         backgroundImage: `url(${image})`,
         width: `${size.width}px`,
+        backgroundPosition: '85%',
         backgroundSize: "cover",
       }}
     />
@@ -65,8 +80,14 @@ export default function Slider() {
       className="slider"
       style={{ width: `${size.width}px`, height: `${size.height}px` }}
     >
-      <div className="slide_filter-left" style={{ height: `${size.height}px` }}></div>
-      <div className="slide_filter-right" style={{ height: `${size.height}px` }}></div>
+      <div
+        className="slide_filter-left"
+        style={{ height: `${size.height}px` }}
+      ></div>
+      <div
+        className="slide_filter-right"
+        style={{ height: `${size.height}px` }}
+      ></div>
       <div
         className="slide_carousel-imgs"
         style={{

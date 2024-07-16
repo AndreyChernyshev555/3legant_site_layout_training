@@ -236,6 +236,7 @@ $blue-accent: #377dff;
   line-height: 28px;
   letter-spacing: -0.4px;
   border-bottom: solid 0.2px black;
+  width: 5em;
 }
 .rooms-cards_sub {
   display: flex;
@@ -510,7 +511,7 @@ $blue-accent: #377dff;
   }
 }
 .newsletter {
-  background-image: url("../../public/newsletter.png");
+  background-image: url("../public/newsletter.png");
   background-size: cover;
   padding: 7.05% 33% 7.05% 33%;
 }
@@ -669,6 +670,7 @@ $blue-accent: #377dff;
   .page {
     width: 100%;
     margin: 0;
+    overflow: hidden;
   }
   .head_section-block {
     display: none;
@@ -677,8 +679,12 @@ $blue-accent: #377dff;
     padding: 0;
     margin-right: 11.1%;
     margin-left: 11.1%;
-    height: 720px;
-    width: 346px;
+  }
+  .slide_button-left {
+    display: none;
+  }
+  .slide_button-right {
+    display: none;
   }
   .description {
     flex-direction: column;

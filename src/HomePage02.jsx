@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./HomePage01.scss";
+import "./HomePage02.scss";
 import Offer from "./Offer/Offer.jsx";
 import Head from "./Head.jsx";
 import Slider from "./Slider/Slider.jsx";
@@ -12,7 +12,7 @@ import Articles from "./Articles/Articles.jsx";
 import Newsletter from "./Newsletter.jsx";
 import Footer from "./Footer.jsx";
 
-export default function HomePage01() {
+export default function HomePage02() {
   const [cartItems, setCartItems] = useState(0);
   const handleClick = () => setCartItems(cartItems => (cartItems + 1));
   return (
