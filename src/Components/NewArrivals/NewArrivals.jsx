@@ -1,7 +1,19 @@
 import React from "react";
 import NewArrivalsItem from "./NewArrivalsItem.jsx";
+import "./NewArrivals.scss";
 
 export default function NewArrivals(props) {
+  const items = props.itemList.map((item) => (
+    <NewArrivalsItem
+      path={item.path}
+      rating={item.rating}
+      goods={item.goods}
+      price={item.price}
+      discount={item.discount}
+      addFunc={props.addFunc}
+      oldPrice={item.oldPrice}
+    />
+  ));
   return (
     <div className="new-arrivals">
       <div className="new-arrivals_text">
@@ -10,44 +22,7 @@ export default function NewArrivals(props) {
           More products &#8594;
         </a>
       </div>
-      <div className="new-arrivals_goods">
-        <NewArrivalsItem 
-          path={"../public/furniture/sofa.png"}
-          rating={5}
-          goods={"Loveseat Sofa"}
-          price={"$199.00"}
-          addFunc={props.addFunc}
-          oldPrice={"$400.00"}
-        />
-        <NewArrivalsItem
-          path={"../public/furniture/lamp.png"}
-          rating={1}
-          goods={"Table Lamp"}
-          price={"$24.99"}
-          addFunc={props.addFunc}
-        />
-        <NewArrivalsItem
-          path={"../public/furniture/beige_lamp.png"}
-          rating={4}
-          goods={"Beige Table Lamp"}
-          price={"$24.99"}
-          addFunc={props.addFunc}
-        />
-        <NewArrivalsItem
-          path={"../public/furniture/cart.png"}
-          rating={5}
-          goods={"Bamboo basket"}
-          price={"$24.99"}
-          addFunc={props.addFunc}
-        />
-        <NewArrivalsItem
-          path={"../public/furniture/toster.png"}
-          rating={3}
-          goods={"Toaster"}
-          price={"$224.99"}
-          addFunc={props.addFunc}
-        />
-      </div>
+      <div className="new-arrivals_goods">{items}</div>
     </div>
   );
 }

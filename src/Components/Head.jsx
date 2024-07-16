@@ -6,7 +6,7 @@ export default function Head(props) {
     <div className="head">
       <div className="head_logo">3legant.</div>
       <div className="head_section-block">
-        <span className="head_main-section">Home</span>
+        <span className="head_section">Home</span>
         <span className="head_section">Shop</span>
         <span className="head_section">Product</span>
         <span className="head_section">Contact us</span>

@@ -10,6 +10,7 @@ export default function NewArrivalsItem(props) {
   const [buttonShow, setButtonShow] = useState(false);
   const handleHover = () => setButtonShow(!buttonShow);
 
+  const visibility = (typeof props.discount === 'string') ? "block" : "none";
   return (
     <div className="new-arrivals_goods-item">
       <div
@@ -19,7 +20,9 @@ export default function NewArrivalsItem(props) {
       >
         <div className="new-arrivals_img-info">
           <div className="new-arrivals_new">NEW</div>
-          <div className="new-arrivals_discount">-50%</div>
+          <div className="new-arrivals_discount" style={{display: `${visibility}`}}>
+            {props.discount}
+          </div>
         </div>
         <img className="new-arrivals_goods-img" src={props.path} />
         <div
