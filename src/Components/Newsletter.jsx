@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Newsletter() {
+export default function Newsletter(props) {
   return (
-    <div className="newsletter">
+    <div className="newsletter" style={{backgroundImage: `url(${props.background})`}}>
       <div className="newsletter_block">
         <div className="newsletter_text">
           <div className="newsletter_header">Join Our Nesletter</div>

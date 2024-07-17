@@ -1,0 +1,52 @@
+.collection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0% 11.1% 0% 11.1%;
+}
+.collection_main {
+  position: relative;
+}
+.collection_main-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 11.4%;
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.6px;
+}
+.collection_link {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  border-bottom: solid 0.2px black;
+  width: 6em;
+}
+.collection_sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.collection_sub-item {
+  position: relative;
+}
+.collection_sub-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24.5%;
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.6px;
+  top: 62%;
+  left: 6%;
+}

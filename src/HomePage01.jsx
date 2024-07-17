@@ -4,7 +4,7 @@ import Offer from "./Components/Offer/Offer.jsx";
 import Head from "./Components/Head.jsx";
 import Slider from "./Components/Slider/Slider.jsx";
 import Description from "./Components/Description.jsx";
-import Collection from "./Components/Collection.jsx";
+import Collection from "./Components/Collection/Collection.jsx";
 import NewArrivals from "./Components/NewArrivals/NewArrivals.jsx";
 import Pros from "./Components/Pros.jsx";
 import Info2 from "./Components/Info2.jsx";
@@ -52,6 +52,13 @@ const itemInfo = [
   },
 ];
 
+const goodsInfo = [
+  { label: "Living Room", img: "../public/living_room.svg", top: "7%", left: "8.6%" },
+  { label: "Bedroom", img: "../public/bedroom.svg" },
+  { label: "Kitchen", img: "../public/kitchen.svg" },
+];
+const collOffering = "Shop Now";
+
 export default function HomePage01() {
   const [cartItems, setCartItems] = useState(0);
   const handleClick = () => setCartItems(cartItems => (cartItems + 1));
@@ -64,15 +71,22 @@ export default function HomePage01() {
         />
         <Slider />
         <Description />
-        <Collection />
+        <Collection 
+          goods={goodsInfo}
+          collOffer={collOffering}
+        />
         <NewArrivals 
           itemList={itemInfo}
           addFunc={handleClick}
+          wrap="no-wrap"
+          header="New arrivals"
         />
         <Pros />
         <Info2 />
         <Articles />
-        <Newsletter />
+        <Newsletter 
+          background="../public/newsletter.png"
+        />
         <Footer />
       </div>
     </div>

@@ -1,0 +1,26 @@
+import React from "react";
+import "./Newsfeed.scss";
+
+const images = [
+  "../public/newsfeed/item0.svg",
+  "../public/newsfeed/item1.svg",
+  "../public/newsfeed/item2.svg",
+  "../public/newsfeed/item3.svg",
+];
+const imageBlock = images.map((image) => <img src={image} />);
+
+export default function Newsfeed() {
+  return (
+    <div className="newsfeed">
+      <div className="newsfeed_text">
+        <div className="newsfeed_text1">Newsfeed</div>
+        <div className="newsfeed_text2">Instagram</div>
+        <div className="newsfeed_text3">Follow us on social media for more discount & promotions</div>
+        <div className="newsfeed_text4">@3legant_official</div>
+      </div>
+      <div className="newsfeed_images">
+        {imageBlock}
+      </div>
+    </div>
+  );
+}

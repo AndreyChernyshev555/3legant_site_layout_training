@@ -17,12 +17,17 @@ export default function NewArrivals(props) {
   return (
     <div className="new-arrivals">
       <div className="new-arrivals_text">
-        <div className="new-arrivals_text-item1">New arrivals</div>
+        <div className="new-arrivals_text-item1">{props.header}</div>
         <a className="new-arrivals_text-item2" href="https://dzen.ru">
           More products &#8594;
         </a>
       </div>
-      <div className="new-arrivals_goods">{items}</div>
+      <div
+        className="new-arrivals_goods"
+        style={{ flexWrap: `${props.wrap}`, overflowX: `${props.overflow}` }}
+      >
+        {items}
+      </div>
     </div>
   );
 }
