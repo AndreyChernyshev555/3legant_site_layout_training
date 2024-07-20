@@ -59,16 +59,17 @@ const goodsInfo = [
 ];
 const collOffering = "Shop Now";
 
-export default function HomePage01() {
+export default function HomePage01(props) {
   const [cartItems, setCartItems] = useState(0);
   const handleClick = () => setCartItems(cartItems => (cartItems + 1));
   return (
     <div>
       <Offer offerText={"30% off storewide — Limited time!"} />
-      <div className="page">
-        <Head 
+      <Head 
           amount={cartItems}
-        />
+          homePageFunc={props.setFunc}
+      />
+      <div className="page">
         <Slider />
         <Description />
         <Collection 

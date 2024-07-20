@@ -76,18 +76,18 @@ const goodsInfo = [
 ];
 const collOffering = "Collection →";
 
-export default function HomePage02() {
+export default function HomePage02(props) {
   const [cartItems, setCartItems] = useState(0);
   const handleClick = () => setCartItems((cartItems) => cartItems + 1);
   return (
     <div>
       <Offer offerText={"30% off storewide — Limited time!"} />
-      <Head amount={cartItems} />
+      <Head amount={cartItems} homePageFunc={props.setFunc} />
       <Promo />
       <div className="page">
         <Logos />
         <NewArrivals
-          itemList={itemInfo.slice(0, 4)}
+          itemList={itemInfo.slice(0, 5)}
           addFunc={handleClick}
           wrap="no-wrap"
           header="New Arrivals"
@@ -104,9 +104,7 @@ export default function HomePage02() {
         <TimePromo />
         <Pros />
         <Newsfeed />
-        <Newsletter 
-          background="../public/newsletter2.svg"
-        />
+        <Newsletter background="../public/newsletter2.svg" />
       </div>
       <Footer />
     </div>
