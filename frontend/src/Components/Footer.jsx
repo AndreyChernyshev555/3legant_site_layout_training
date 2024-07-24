@@ -27,9 +27,9 @@ export default function Footer() {
           <div className="footer_copyright-terms">Terms of Use</div>
         </div>
         <div className="footer_social">
-          <img src="../public/icons/instagram.svg" />
-          <img src="../public/icons/facebook.svg" />
-          <img src="../public/icons/youtube.svg" />
+          <img src="../public/img/icons/instagram.svg" />
+          <img src="../public/img/icons/facebook.svg" />
+          <img src="../public/img/icons/youtube.svg" />
         </div>
       </div>
     </div>

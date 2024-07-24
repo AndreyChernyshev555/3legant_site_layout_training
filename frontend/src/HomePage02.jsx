@@ -15,49 +15,49 @@ import Newsletter from "./Components/Newsletter.jsx";
 
 const itemInfo = [
   {
-    path: "../public/headphones/item0.svg",
+    path: "../public/img/headphones/item0.svg",
     rating: 5,
     goods: "Skullcandy - Crusher anc 2 wireless headphones",
     price: "$299.99",
   },
   {
-    path: "../public/headphones/item1.svg",
+    path: "../public/img/headphones/item1.svg",
     rating: 5,
     goods: "Beats Studio Pro",
     price: "$349.99",
   },
   {
-    path: "../public/headphones/item2.svg",
+    path: "../public/img/headphones/item2.svg",
     rating: 5,
     goods: "Sony - WH-CH720N Wireless Noise Canceling",
     price: "$149.99",
   },
   {
-    path: "../public/headphones/item3.svg",
+    path: "../public/img/headphones/item3.svg",
     rating: 5,
     goods: "Skullcandy - Rail True Wireless Earbuds",
     price: "$79.99",
   },
   {
-    path: "../public/headphones/item4.svg",
+    path: "../public/img/headphones/item4.svg",
     rating: 5,
     goods: "Beats Studio Pro",
     price: "$224.99",
   },
   {
-    path: "../public/headphones/item5.svg",
+    path: "../public/img/headphones/item5.svg",
     rating: 5,
     goods: "JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports",
     price: "$179.95",
   },
   {
-    path: "../public/headphones/item6.svg",
+    path: "../public/img/headphones/item6.svg",
     rating: 5,
     goods: "Bose QuietComfort Headphones",
     price: "$349.00",
   },
   {
-    path: "../public/headphones/item7.svg",
+    path: "../public/img/headphones/item7.svg",
     rating: 5,
     goods: "AKG Y600NC Wireless",
     price: "$349.99",
@@ -67,12 +67,12 @@ const itemInfo = [
 const goodsInfo = [
   {
     label: "Headband",
-    img: "../public/headphones_collection/item0.svg",
+    img: "../public/img/headphones_collection/item0.svg",
     top: "81.5%",
     left: "8.6%",
   },
-  { label: "Earbuds", img: "../public/headphones_collection/item1.svg" },
-  { label: "Accessories", img: "../public/headphones_collection/item2.svg" },
+  { label: "Earbuds", img: "../public/img/headphones_collection/item1.svg" },
+  { label: "Accessories", img: "../public/img/headphones_collection/item2.svg" },
 ];
 const collOffering = "Collection →";
 
@@ -104,7 +104,7 @@ export default function HomePage02(props) {
         <TimePromo />
         <Pros />
         <Newsfeed />
-        <Newsletter background="../public/newsletter2.svg" />
+        <Newsletter background="../public/img/newsletter2.svg" />
       </div>
       <Footer />
     </div>

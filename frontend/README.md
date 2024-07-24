@@ -8,4 +8,4 @@
 npm i 
 npm run build
 ``` 
-Для просмотра приложения используйте файл src/index.html  
+Для просмотра приложения используйте файл public/index.html  

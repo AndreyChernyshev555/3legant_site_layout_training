@@ -12,10 +12,10 @@ export default function Head(props) {
         <span className="head_section">Contact us</span>
       </div>
       <div className="head_buttons-block">
-        <img className="head_button" src="../public/search.svg" />
-        <img className="head_button" src="../public/user.svg" />
+        <img className="head_button" src="../public/img/icons/search.svg" />
+        <img className="head_button" src="../public/img/icons/user.svg" />
         <div className="head_cart">
-          <img className="head_button" src="../public/cart.svg" />
+          <img className="head_button" src="../public/img/icons/cart.svg" />
           <HeadIndicator
             amount={props.amount}
           />

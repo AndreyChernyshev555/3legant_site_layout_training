@@ -3,15 +3,15 @@ import ArticleItem from "./ArticleItem.jsx";
 
 const articleList = [
   {
-    path: "../public/articles/article1.png",
+    path: "../public/img/articles/article1.png",
     label: "7 ways to decor your home"
   },
   {
-    path: "../public/articles/article2.png",
+    path: "../public/img/articles/article2.png",
     label: "Kitchen organization"
   },
   {
-    path: "../public/articles/article3.png",
+    path: "../public/img/articles/article3.png",
     label: "Decor your bedroom"
   }
 ]

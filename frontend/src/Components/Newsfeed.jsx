@@ -2,10 +2,10 @@ import React from "react";
 import "./Newsfeed.scss";
 
 const images = [
-  "../public/newsfeed/item0.svg",
-  "../public/newsfeed/item1.svg",
-  "../public/newsfeed/item2.svg",
-  "../public/newsfeed/item3.svg",
+  "../public/img/newsfeed/item0.svg",
+  "../public/img/newsfeed/item1.svg",
+  "../public/img/newsfeed/item2.svg",
+  "../public/img/newsfeed/item3.svg",
 ];
 const imageBlock = images.map((image) => <img src={image} />);
 

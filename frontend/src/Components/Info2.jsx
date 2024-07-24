@@ -3,7 +3,7 @@ import React from "react";
 export default function Info2() {
   return (
     <div className="info2">
-      <img className="info2_img" src="../public/paste1.png" />
+      <img className="info2_img" src="../public/img/paste1.png" />
       <div className="info2_offer">
         <div className="info2_offer-sale-up">SALE UP TO 35% OFF</div>
         <div className="info2_offer-head">HUNDREDS of New lower prices!</div>

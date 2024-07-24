@@ -3,10 +3,10 @@ import SlideIndicator from "./SlideIndicator.jsx";
 import "./Slider.scss";
 
 const images = [
-  "../public/slider_images/home_page_slide1.png",
-  "../public/slider_images/home_page_slide2.jpg",
-  "../public/slider_images/home_page_slide3.jpg",
-  "../public/slider_images/home_page_slide4.jpg",
+  "../public/img/slider_images/home_page_slide1.png",
+  "../public/img/slider_images/home_page_slide2.jpg",
+  "../public/img/slider_images/home_page_slide3.jpg",
+  "../public/img/slider_images/home_page_slide4.jpg",
 ];
 
 export default function Slider() {
@@ -93,10 +93,10 @@ export default function Slider() {
         {imageList}
       </div>
       <div className="slide_button-left" onClick={leftClick}>
-        <img src="../public/arrow-left.svg" />
+        <img src="../public/img/icons/arrow-left.svg" />
       </div>
       <div className="slide_button-right" onClick={rightClick}>
-        <img src="../public/arrow-right.svg" />
+        <img src="../public/img/icons/arrow-right.svg" />
       </div>
       <SlideIndicator amount={4} light={currImg} />
     </div>

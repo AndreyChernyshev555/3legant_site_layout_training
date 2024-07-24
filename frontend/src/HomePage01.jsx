@@ -14,7 +14,7 @@ import Footer from "./Components/Footer.jsx";
 
 const itemInfo = [
   {
-    path: "../public/furniture/sofa.png",
+    path: "../public/img/furniture/sofa.png",
     rating: 5,
     goods: "Loveseat Sofa",
     price: "$199.00",
@@ -22,28 +22,28 @@ const itemInfo = [
     discount: "-50%"
   },
   {
-    path: "../public/furniture/lamp.png",
+    path: "../public/img/furniture/lamp.png",
     rating: 5,
     goods: "Table Lamp",
     price: "$24.99",
     discount: "-50%"
   },
   {
-    path: "../public/furniture/beige_lamp.png",
+    path: "../public/img/furniture/beige_lamp.png",
     rating: 5,
     goods: "Loveseat Sofa",
     price: "$24.00",
     discount: "-50%"
   },
   {
-    path: "../public/furniture/cart.png",
+    path: "../public/img/furniture/cart.png",
     rating: 5,
     goods: "Bamboo Basket",
     price: "$10.50",
     discount: "-50%"
   },
   {
-    path: "../public/furniture/toster.png",
+    path: "../public/img/furniture/toster.png",
     rating: 5,
     goods: "Toaster",
     price: "$249.25",
@@ -53,9 +53,9 @@ const itemInfo = [
 ];
 
 const goodsInfo = [
-  { label: "Living Room", img: "../public/living_room.svg", top: "7%", left: "8.6%" },
-  { label: "Bedroom", img: "../public/bedroom.svg" },
-  { label: "Kitchen", img: "../public/kitchen.svg" },
+  { label: "Living Room", img: "../public/img/living_room.svg", top: "7%", left: "8.6%" },
+  { label: "Bedroom", img: "../public/img/bedroom.svg" },
+  { label: "Kitchen", img: "../public/img/kitchen.svg" },
 ];
 const collOffering = "Shop Now";
 
@@ -86,7 +86,7 @@ export default function HomePage01(props) {
         <Info2 />
         <Articles />
         <Newsletter 
-          background="../public/newsletter.png"
+          background="../public/img/newsletter.png"
         />
         <Footer />
       </div>

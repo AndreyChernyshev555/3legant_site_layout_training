@@ -17,7 +17,7 @@ export default function Logos() {
 
   let images = [];
   for (let i = 1; i <= 6; i++) {
-    const address = "../public/team_logos/logo" + i + ".svg";
+    const address = "../public/img/team_logos/logo" + i + ".svg";
     images.push(
       <div
         className="logos_item"

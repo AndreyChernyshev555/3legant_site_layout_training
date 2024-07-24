@@ -12,7 +12,7 @@ export default function Newsletter(props) {
         </div>
         <div className="newsletter_form">
           <div className="newsletter_form-left">
-            <img src="../public/email.svg" />
+            <img src="../public/img/icons/email.svg" />
             <input
               className="newsletter_form-input"
               placeholder="Email adress"

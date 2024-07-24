@@ -9,7 +9,7 @@ export default function Offer({ offerText }) {
     <div className="offer" id="offer1" style={{display: isShown ? 'flex' : 'none'}}>
       <div></div>
       <div className="offer_center">
-        <img className="offer_img" src="../public/offer.svg" />
+        <img className="offer_img" src="../public/img/icons/offer.svg" />
         <span className="offer_text">{offerText}</span>
         <span className="offer_link">Shop now &#8594;</span>
       </div>
