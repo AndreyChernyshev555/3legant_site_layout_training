@@ -1,9 +1,10 @@
 import React from "react";
 import HeadIndicator from "./HeadIndicator.jsx";
+import "./Head.scss";
 
 export default function Head(props) {
   return (
-    <div className="head">
+    <div className="head" style={props.headStyle}>
       <div className="head_logo">3legant.</div>
       <div className="head_section-block">
         <span className="head_section" onClick={() => props.homePageFunc(0)}>Home</span>

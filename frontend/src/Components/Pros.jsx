@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Pros.scss";
 export default function Pros() {
   return (
     <div className="pros">

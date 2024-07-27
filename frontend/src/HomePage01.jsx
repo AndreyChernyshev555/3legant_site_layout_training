@@ -68,6 +68,10 @@ export default function HomePage01(props) {
       <Head 
           amount={cartItems}
           homePageFunc={props.setFunc}
+          headStyle={{
+            backgroundColor: "white",
+            color: "#6c7275",
+          }}
       />
       <div className="page">
         <Slider />

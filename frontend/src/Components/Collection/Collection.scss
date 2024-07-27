@@ -1,11 +1,12 @@
 .collection {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0% 11.1% 0% 11.1%;
+  gap: 2.5%;
+  margin: 0% 11.1% 0% 11.1%;
 }
 .collection_main {
   position: relative;
+  width: 50%;
 }
 .collection_main-text {
   position: absolute;
@@ -32,6 +33,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 50%;
 }
 .collection_sub-item {
   position: relative;

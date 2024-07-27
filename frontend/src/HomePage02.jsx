@@ -72,17 +72,57 @@ const goodsInfo = [
     left: "8.6%",
   },
   { label: "Earbuds", img: "../public/img/headphones_collection/item1.svg" },
-  { label: "Accessories", img: "../public/img/headphones_collection/item2.svg" },
+  {
+    label: "Accessories",
+    img: "../public/img/headphones_collection/item2.svg",
+  },
 ];
 const collOffering = "Collection →";
+
+// .head {
+//     background-color: $main-head-color;
+//     color: $head-font-color;
+//   }
+//   .head_section {
+//     transition: color, 0.2s;
+//     &:hover {
+//       color: $font-color;
+//     }
+//   }
+//   .head_button {
+//     transition: filter, 0.2s;
+//     &:hover {
+//       filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(240deg)
+//         brightness(105%) contrast(103%);
+//     }
+//   }
+//   .head_indicator {
+//     background-color: #141718;
+//     color: $font-color;
+//   }
 
 export default function HomePage02(props) {
   const [cartItems, setCartItems] = useState(0);
   const handleClick = () => setCartItems((cartItems) => cartItems + 1);
   return (
     <div>
-      <Offer offerText={"30% off storewide — Limited time!"} />
-      <Head amount={cartItems} homePageFunc={props.setFunc} />
+      <Offer
+        offerText={"30% off storewide — Limited time!"}
+        offerColors={{ background: "#141718", color: "#f3f5f7" }}
+        offerImg={{
+          filter:
+            "invert(100%) sepia(0%) saturate(0%) hue-rotate(240deg) brightness(105%) contrast(103%)",
+        }}
+        offerLink={{ color: "rgba(255, 171, 0, 0.64" }}
+      />
+      <Head
+        amount={cartItems}
+        homePageFunc={props.setFunc}
+        headStyle={{
+          backgroundColor: "rgba(255, 171, 0, 0.64)",
+          color: "#141718",
+        }}
+      />
       <Promo />
       <div className="page">
         <Logos />
