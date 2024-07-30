@@ -12,12 +12,7 @@ export default function TimePromo() {
         <div className="time-promotion_text">
           Thousands of high tech are waiting for you
         </div>
-        <PromoTimer 
-            days="02"
-            hours="12"
-            minutes="45"
-            seconds="05"
-        />
+        <PromoTimer />
         <div className="time-promotion_button">
             Shop now
         </div>

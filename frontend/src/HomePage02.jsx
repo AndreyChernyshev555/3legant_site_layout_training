@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "./HomePage02.scss";
 import Offer from "./Components/Offer/Offer.jsx";
-import Head from "./Components/Head.jsx";
+import Head from "./Components/Head/Head.jsx";
 import Promo from "./Components/Promo.jsx";
 import Logos from "./Components/Logos.jsx";
 import Footer from "./Components/Footer.jsx";
 import NewArrivals from "./Components/NewArrivals/NewArrivals.jsx";
 import Collection from "./Components/Collection/Collection.jsx";
-import PageHeader from "./Components/PageHeader.jsx";
+import PageHeader from "./Components/PageHeader/PageHeader.jsx";
 import TimePromo from "./Components/TimePromo/TimePromo.jsx";
-import Pros from "./Components/Pros.jsx";
-import Newsfeed from "./Components/Newsfeed.jsx";
+import Pros from "./Components/Pros/Pros.jsx";
+import Newsfeed from "./Components/Newsfeed/Newsfeed.jsx";
 import Newsletter from "./Components/Newsletter.jsx";
 
 const itemInfo = [
@@ -132,7 +132,7 @@ export default function HomePage02(props) {
           wrap="no-wrap"
           header="New Arrivals"
         />
-        <PageHeader text="Shop Collection" />
+        <div className="page-header">Shop Collection</div>
         <Collection goods={goodsInfo} collOffer={collOffering} />
         <NewArrivals
           itemList={itemInfo}

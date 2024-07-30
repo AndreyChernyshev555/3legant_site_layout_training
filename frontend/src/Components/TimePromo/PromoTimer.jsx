@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 let today = new Date();
-const finish = new Date(2024, 6, 24);
+const finish = new Date(2025, 1, 1);
 
 function addZero(number) {
     if (number < 10) return "0" + number;

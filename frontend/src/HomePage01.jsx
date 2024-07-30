@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import "./HomePage01.scss";
 import Offer from "./Components/Offer/Offer.jsx";
-import Head from "./Components/Head.jsx";
+import Head from "./Components/Head/Head.jsx";
 import Slider from "./Components/Slider/Slider.jsx";
 import Description from "./Components/Description.jsx";
 import Collection from "./Components/Collection/Collection.jsx";
 import NewArrivals from "./Components/NewArrivals/NewArrivals.jsx";
-import Pros from "./Components/Pros.jsx";
+import Pros from "./Components/Pros/Pros.jsx";
 import Info2 from "./Components/Info2.jsx";
 import Articles from "./Components/Articles/Articles.jsx";
 import Newsletter from "./Components/Newsletter.jsx";

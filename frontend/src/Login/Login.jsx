@@ -5,8 +5,7 @@ export default function Login({setter = ()=>{}}) {
   return (
     <div className="enter-page">
       <div className="enter-page_logo">
-        <img className="enter-page_img-left" src="../public/img/main_img_left.png" />
-        <img className="enter-page_img-top" src="../public/img/main_img_top.png" />
+        <div className="enter-page_logo-img" />
         <div className="enter-page_logo-text">3legant.</div>
       </div>
       <div className="enter-block">
