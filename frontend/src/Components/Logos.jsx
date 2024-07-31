@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import teamLogos from "../../public/img/team_logos/teamLogos.js";
 
 const proportion = 60 / 1920;
 
@@ -16,8 +17,8 @@ export default function Logos() {
   }, []);
 
   let images = [];
-  for (let i = 1; i <= 6; i++) {
-    const address = "../public/img/team_logos/logo" + i + ".svg";
+  for (let i = 0; i < 6; i++) {
+    const address = teamLogos[i];
     images.push(
       <div
         className="logos_item"

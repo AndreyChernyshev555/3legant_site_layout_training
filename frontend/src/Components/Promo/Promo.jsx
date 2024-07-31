@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Promo.scss";
 
 export default function Promo() {
   return (

@@ -34,3 +34,12 @@ $offer-background: #f3f5f7;
 // .offer_link {
 //   color: rgba(255, 171, 0, 0.64);
 // }
+@media screen and (max-width: 480px) {
+  .offer {
+    padding: 0;
+  }
+  .offer_center {
+    width: 90%;
+    gap: 2%;
+  }
+}

@@ -2,62 +2,64 @@ import React, { useState } from "react";
 import "./HomePage02.scss";
 import Offer from "./Components/Offer/Offer.jsx";
 import Head from "./Components/Head/Head.jsx";
-import Promo from "./Components/Promo.jsx";
+import Promo from "./Components/Promo/Promo.jsx";
 import Logos from "./Components/Logos.jsx";
 import Footer from "./Components/Footer.jsx";
 import NewArrivals from "./Components/NewArrivals/NewArrivals.jsx";
 import Collection from "./Components/Collection/Collection.jsx";
-import PageHeader from "./Components/PageHeader/PageHeader.jsx";
 import TimePromo from "./Components/TimePromo/TimePromo.jsx";
 import Pros from "./Components/Pros/Pros.jsx";
 import Newsfeed from "./Components/Newsfeed/Newsfeed.jsx";
 import Newsletter from "./Components/Newsletter.jsx";
+import newsletterBack from "../public/img/newsletter2.svg";
+import headColl from "../public/img/headphones_collection/headColl.js";
+import headphones from "../public/img/headphones/headphones.js";
 
 const itemInfo = [
   {
-    path: "../public/img/headphones/item0.svg",
+    path: headphones[0],
     rating: 5,
     goods: "Skullcandy - Crusher anc 2 wireless headphones",
     price: "$299.99",
   },
   {
-    path: "../public/img/headphones/item1.svg",
+    path: headphones[1],
     rating: 5,
     goods: "Beats Studio Pro",
     price: "$349.99",
   },
   {
-    path: "../public/img/headphones/item2.svg",
+    path: headphones[2],
     rating: 5,
     goods: "Sony - WH-CH720N Wireless Noise Canceling",
     price: "$149.99",
   },
   {
-    path: "../public/img/headphones/item3.svg",
+    path: headphones[3],
     rating: 5,
     goods: "Skullcandy - Rail True Wireless Earbuds",
     price: "$79.99",
   },
   {
-    path: "../public/img/headphones/item4.svg",
+    path: headphones[4],
     rating: 5,
     goods: "Beats Studio Pro",
     price: "$224.99",
   },
   {
-    path: "../public/img/headphones/item5.svg",
+    path: headphones[5],
     rating: 5,
     goods: "JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports",
     price: "$179.95",
   },
   {
-    path: "../public/img/headphones/item6.svg",
+    path: headphones[6],
     rating: 5,
     goods: "Bose QuietComfort Headphones",
     price: "$349.00",
   },
   {
-    path: "../public/img/headphones/item7.svg",
+    path: headphones[7],
     rating: 5,
     goods: "AKG Y600NC Wireless",
     price: "$349.99",
@@ -67,14 +69,14 @@ const itemInfo = [
 const goodsInfo = [
   {
     label: "Headband",
-    img: "../public/img/headphones_collection/item0.svg",
+    img: headColl[0],
     top: "81.5%",
     left: "8.6%",
   },
-  { label: "Earbuds", img: "../public/img/headphones_collection/item1.svg" },
+  { label: "Earbuds", img: headColl[1] },
   {
     label: "Accessories",
-    img: "../public/img/headphones_collection/item2.svg",
+    img: headColl[2],
   },
 ];
 const collOffering = "Collection →";
@@ -144,7 +146,7 @@ export default function HomePage02(props) {
         <TimePromo />
         <Pros />
         <Newsfeed />
-        <Newsletter background="../public/img/newsletter2.svg" />
+        <Newsletter background={newsletterBack} />
       </div>
       <Footer />
     </div>

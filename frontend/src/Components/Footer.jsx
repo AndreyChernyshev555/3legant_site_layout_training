@@ -1,5 +1,8 @@
 import React from "react";
-
+import "./Footer.scss";
+import instagramIcon from "../../public/img/icons/instagram.svg"
+import facebookIcon from "../../public/img/icons/facebook.svg"
+import youtubeIcon from "../../public/img/icons/youtube.svg"
 export default function Footer() {
   return (
     <div className="footer">
@@ -27,9 +30,9 @@ export default function Footer() {
           <div className="footer_copyright-terms">Terms of Use</div>
         </div>
         <div className="footer_social">
-          <img src="../public/img/icons/instagram.svg" />
-          <img src="../public/img/icons/facebook.svg" />
-          <img src="../public/img/icons/youtube.svg" />
+          <img src={instagramIcon} />
+          <img src={facebookIcon} />
+          <img src={youtubeIcon} />
         </div>
       </div>
     </div>

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import starIcon from "../../../public/img/star.svg"
 
 export default function NewArrivalsItem(props) {
   const rating = props.rating;
   let rateBlock = [];
   for (let i = 0; i < rating; i++) {
-    rateBlock.push(<img src="../public/img/star.svg" />);
+    rateBlock.push(<img src={starIcon} />);
   }
 
   const [buttonShow, setButtonShow] = useState(false);

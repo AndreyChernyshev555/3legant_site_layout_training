@@ -1,9 +1,10 @@
 import React from "react";
+import paste1 from "../../public/img/paste1.png";
 
 export default function Info2() {
   return (
     <div className="info2">
-      <img className="info2_img" src="../public/img/paste1.png" />
+      <img className="info2_img" src={paste1} />
       <div className="info2_offer">
         <div className="info2_offer-sale-up">SALE UP TO 35% OFF</div>
         <div className="info2_offer-head">HUNDREDS of New lower prices!</div>

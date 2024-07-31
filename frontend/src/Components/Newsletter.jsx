@@ -1,8 +1,16 @@
 import React from "react";
+import emailIcon from "../../public/img/icons/email.svg";
 
 export default function Newsletter(props) {
+  const backgroundImg = window.matchMedia("screen and (max-width: 480px)")
+    .matches
+    ? "none"
+    : `url(${props.background})`;
   return (
-    <div className="newsletter" style={{backgroundImage: `url(${props.background})`}}>
+    <div
+      className="newsletter"
+      style={{ backgroundImage: backgroundImg }}
+    >
       <div className="newsletter_block">
         <div className="newsletter_text">
           <div className="newsletter_header">Join Our Nesletter</div>
@@ -12,7 +20,7 @@ export default function Newsletter(props) {
         </div>
         <div className="newsletter_form">
           <div className="newsletter_form-left">
-            <img src="../public/img/icons/email.svg" />
+            <img src={emailIcon} />
             <input
               className="newsletter_form-input"
               placeholder="Email adress"

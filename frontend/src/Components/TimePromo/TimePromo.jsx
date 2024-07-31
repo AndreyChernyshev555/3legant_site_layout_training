@@ -1,11 +1,12 @@
 import React from "react";
 import PromoTimer from "./PromoTimer.jsx";
 import "./TimePromo.scss";
+import timePromoImg from "../../../public/img/hurry.svg"
 
 export default function TimePromo() {
   return (
     <div className="time-promotion">
-      <img className="time-promotion_img" src="../public/img/hurry.svg" />
+      <img className="time-promotion_img" src={timePromoImg} />
       <div className="time-promotion_content">
         <div className="time-promotion_header">PROMOTION</div>
         <div className="time-promotion_offer">Hurry up! 40% OFF</div>

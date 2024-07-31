@@ -1,28 +1,49 @@
 import React, { useState, useEffect } from "react";
 import SlideIndicator from "./SlideIndicator.jsx";
 import "./Slider.scss";
+import imSlide1 from "../../../public/img/slider_images/home_page_slide1.png";
+import imSlide2 from "../../../public/img/slider_images/home_page_slide2.jpg";
+import imSlide3 from "../../../public/img/slider_images/home_page_slide3.jpg";
+import imSlide4 from "../../../public/img/slider_images/home_page_slide4.jpg";
+import arrLeft from "../../../public/img/icons/arrow-left.svg";
+import arrRight from "../../../public/img/icons/arrow-right.svg";
 
-const images = [
-  "../public/img/slider_images/home_page_slide1.png",
-  "../public/img/slider_images/home_page_slide2.jpg",
-  "../public/img/slider_images/home_page_slide3.jpg",
-  "../public/img/slider_images/home_page_slide4.jpg",
-];
+const images = [imSlide1, imSlide2, imSlide3, imSlide4];
 
 export default function Slider() {
-  const widthProportion = window.matchMedia(
-    "screen and (max-width: 1440px) and (orientation: portrait)"
-  ).matches
+  const widthProportion = window.matchMedia("screen and (max-width: 480px)")
+    .matches
     ? 1920 / 1920
     : 1120 / 1920;
-  const heightProportion = window.matchMedia(
-    "screen and (max-width: 1440px) and (orientation: portrait)"
-  ).matches
-    ? 720 / 1920
+  const heightProportion = window.matchMedia("screen and (max-width: 480px)")
+    .matches
+    ? 1920 / 1920
     : 560 / 1920;
-
   const lastIndex = images.length - 1;
   const [currImg, setCurrImg] = useState(0);
+  const [touchPosition, setTouchPosition] = useState(null);
+
+  const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e) => {
+    const touchDown = touchPosition;
+    if (touchDown === null) {
+      return;
+    }
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+    if (diff > 5) {
+      rightClick();
+    }
+    if (diff < -5) {
+      leftClick();
+    }
+    setTouchPosition(null);
+  };
+
   const leftClick = function () {
     if (currImg > 0) setCurrImg((currImg) => currImg - 1);
     else setCurrImg(lastIndex);
@@ -36,7 +57,7 @@ export default function Slider() {
     const interval = setInterval(() => {
       if (currImg < lastIndex) setCurrImg((currImg) => currImg + 1);
       else setCurrImg(0);
-    }, 3000);
+    }, 7000);
     return () => clearInterval(interval);
   }, [currImg]);
 
@@ -65,6 +86,7 @@ export default function Slider() {
         backgroundImage: `url(${image})`,
         width: `${size.width}px`,
         backgroundSize: "cover",
+        backgroundPosition: "64%",
       }}
     />
   ));
@@ -73,6 +95,8 @@ export default function Slider() {
     <div
       className="slider"
       style={{ width: `${size.width}px`, height: `${size.height}px` }}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
     >
       <div
         className="slide_filter-left"
@@ -93,10 +117,10 @@ export default function Slider() {
         {imageList}
       </div>
       <div className="slide_button-left" onClick={leftClick}>
-        <img src="../public/img/icons/arrow-left.svg" />
+        <img src={arrLeft} />
       </div>
       <div className="slide_button-right" onClick={rightClick}>
-        <img src="../public/img/icons/arrow-right.svg" />
+        <img src={arrRight} />
       </div>
       <SlideIndicator amount={4} light={currImg} />
     </div>

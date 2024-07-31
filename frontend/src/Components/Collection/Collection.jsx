@@ -2,8 +2,16 @@ import React, { useState, useEffect } from "react";
 import "./Collection.scss";
 
 export default function Collection(props) {
-  const heightProportionMain = 650/1920;
-  const heightProportionSub = 310/1920;
+  const heightProportionMain = window.matchMedia(
+    "screen and (max-width: 480px)"
+  ).matches
+    ? 1920 / 1920
+    : 650 / 1920;
+  const heightProportionSub = window.matchMedia(
+    "screen and (max-width: 480px)"
+  ).matches
+    ? 960 / 1920
+    : 310 / 1920;
 
   const [sizeMain, setSizeMain] = useState(heightProportionMain * window.innerWidth);
   const [sizeSub, setSizeSub] = useState(heightProportionSub * window.innerWidth);

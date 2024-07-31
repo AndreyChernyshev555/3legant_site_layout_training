@@ -1,17 +1,20 @@
 import React from "react";
 import ArticleItem from "./ArticleItem.jsx";
+import article1 from "../../../public/img/articles/article1.png";
+import article2 from "../../../public/img/articles/article2.png";
+import article3 from "../../../public/img/articles/article3.png";
 
 const articleList = [
   {
-    path: "../public/img/articles/article1.png",
+    path: article1,
     label: "7 ways to decor your home"
   },
   {
-    path: "../public/img/articles/article2.png",
+    path: article2,
     label: "Kitchen organization"
   },
   {
-    path: "../public/img/articles/article3.png",
+    path: article3,
     label: "Decor your bedroom"
   }
 ]

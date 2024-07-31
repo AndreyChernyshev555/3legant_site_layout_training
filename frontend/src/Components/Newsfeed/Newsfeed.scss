@@ -40,3 +40,12 @@
   gap: 16px;
   margin-top: 40px;
 }
+
+@media screen and (max-width: 480px) {
+  .newsfeed {
+    padding: 5%;
+  }
+  .newsfeed_images {
+    flex-direction: column;
+  }
+}

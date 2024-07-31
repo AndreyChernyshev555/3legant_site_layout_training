@@ -138,3 +138,14 @@ $blue-accent: #377dff;
   font-weight: 400;
   text-decoration: line-through;
 }
+
+@media screen and (max-width: 480px) {
+  .new-arrivals_goods {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    gap: 20px;
+  }
+  .new-arrivals_goods-item {
+    width: 50%;
+  }
+}

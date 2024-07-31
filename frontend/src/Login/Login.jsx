@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./login.scss";
 
-export default function Login({setter = ()=>{}}) {
+export default function Login() {
+  const navigate = useNavigate();
   return (
     <div className="enter-page">
       <div className="enter-page_logo">
@@ -41,7 +43,7 @@ export default function Login({setter = ()=>{}}) {
         </form>
         <button 
           className="enter-block_button"
-          onClick={setter}
+          onClick={() => navigate("/home1", {replace: false})}
         >
           Sign up
         </button>

@@ -11,10 +11,13 @@ import Info2 from "./Components/Info2.jsx";
 import Articles from "./Components/Articles/Articles.jsx";
 import Newsletter from "./Components/Newsletter.jsx";
 import Footer from "./Components/Footer.jsx";
+import rooms from "../public/img/rooms/rooms.js";
+import newsletterBack from "../public/img/newsletter.png";
+import furniture from "../public/img/furniture/furniture.js";
 
 const itemInfo = [
   {
-    path: "../public/img/furniture/sofa.png",
+    path: furniture[0],
     rating: 5,
     goods: "Loveseat Sofa",
     price: "$199.00",
@@ -22,28 +25,28 @@ const itemInfo = [
     discount: "-50%"
   },
   {
-    path: "../public/img/furniture/lamp.png",
+    path: furniture[1],
     rating: 5,
     goods: "Table Lamp",
     price: "$24.99",
     discount: "-50%"
   },
   {
-    path: "../public/img/furniture/beige_lamp.png",
+    path: furniture[2],
     rating: 5,
     goods: "Loveseat Sofa",
     price: "$24.00",
     discount: "-50%"
   },
   {
-    path: "../public/img/furniture/cart.png",
+    path: furniture[3],
     rating: 5,
     goods: "Bamboo Basket",
     price: "$10.50",
     discount: "-50%"
   },
   {
-    path: "../public/img/furniture/toster.png",
+    path: furniture[4],
     rating: 5,
     goods: "Toaster",
     price: "$249.25",
@@ -53,9 +56,9 @@ const itemInfo = [
 ];
 
 const goodsInfo = [
-  { label: "Living Room", img: "../public/img/living_room.svg", top: "7%", left: "8.6%" },
-  { label: "Bedroom", img: "../public/img/bedroom.svg" },
-  { label: "Kitchen", img: "../public/img/kitchen.svg" },
+  { label: "Living Room", img: rooms[2], top: "7%", left: "8.6%" },
+  { label: "Bedroom", img: rooms[0] },
+  { label: "Kitchen", img: rooms[1] },
 ];
 const collOffering = "Shop Now";
 
@@ -90,7 +93,7 @@ export default function HomePage01(props) {
         <Info2 />
         <Articles />
         <Newsletter 
-          background="../public/img/newsletter.png"
+          background={newsletterBack}
         />
         <Footer />
       </div>

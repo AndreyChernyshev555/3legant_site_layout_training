@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Offer.scss";
+import offerIcon from "../../../public/img/icons/offer.svg";
 
 export default function Offer(props) {
   const [isShown, setIsShown] = useState(true);
@@ -10,7 +11,7 @@ export default function Offer(props) {
     <div className="offer" id="offer1" style={isShown ? props.offerColors : {display: 'none'}}>
       <div></div>
       <div className="offer_center">
-        <img className="offer_img" src="../public/img/icons/offer.svg" style={props.offerImg}/>
+        <img className="offer_img" src={offerIcon} style={props.offerImg}/>
         <span className="offer_text">{props.offerText}</span>
         <span className="offer_link" style={props.offerLink}>Shop now &#8594;</span>
       </div>
