@@ -3,7 +3,7 @@ import "./HomePage01.scss";
 import Offer from "./Components/Offer/Offer.jsx";
 import Head from "./Components/Head/Head.jsx";
 import Slider from "./Components/Slider/Slider.jsx";
-import Description from "./Components/Description.jsx";
+import Description from "./Components/Description/Description.jsx";
 import Collection from "./Components/Collection/Collection.jsx";
 import NewArrivals from "./Components/NewArrivals/NewArrivals.jsx";
 import Pros from "./Components/Pros/Pros.jsx";

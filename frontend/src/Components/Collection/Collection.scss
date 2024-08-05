@@ -1,68 +1,48 @@
 .collection {
-  display: flex;
-  flex-direction: row;
-  gap: 2.5%;
-  margin: 0% 11.1% 0% 11.1%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2.5%;
+    margin: 0% 11.1% 0% 11.1%;
 }
 .collection_main {
-  position: relative;
-  width: 50%;
+    position: relative;
+    grid-row: span 2;
 }
 .collection_main-text {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: Poppins;
-  font-size: 34px;
-  font-weight: 500;
-  line-height: 38px;
-  letter-spacing: -0.6px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Poppins;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: -0.6px;
 }
 .collection_link {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: -0.4px;
-  border-bottom: solid 0.2px black;
-  width: 6em;
-}
-.collection_sub {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+    border-bottom: solid 0.2px black;
+    width: 6em;
 }
 .collection_sub-item {
-  position: relative;
+    position: relative;
 }
 .collection_sub-text {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: Poppins;
-  font-size: 34px;
-  font-weight: 500;
-  line-height: 38px;
-  letter-spacing: -0.6px;
-  width: fit-content;
-  height: fit-content;
-  bottom: 12%;
-  left: 6%;
+    @extend .collection_main-text;
+    width: fit-content;
+    height: fit-content;
+    bottom: 12%;
+    left: 6%;
 }
 
 @media screen and (max-width: 480px) {
-  .collection {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .collection_main {
-    width: 100%;
-  }
-  .collection_sub {
-    width: 100%;
-    gap: 24px;
-  }
+    .collection {
+        grid-template-columns: none;
+        grid-template-rows: auto;
+    }
 }

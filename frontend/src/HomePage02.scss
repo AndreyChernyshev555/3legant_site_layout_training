@@ -45,38 +45,6 @@ $blue-accent: #377dff;
 .logos_item {
   width: 15%;
 }
-
-.description {
-  @include flex-row;
-  @include thin;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.description_item1 {
-  font-family: Poppins;
-  font-size: 72px;
-  font-weight: 500;
-  line-height: 76px;
-  letter-spacing: -2px;
-  text-align: left;
-}
-.description_back {
-  color: $secondary-color;
-}
-.description_item2 {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-  color: $secondary-color;
-  padding-right: 48px;
-}
-.description_label {
-  font-weight: 600;
-  color: $secondary-label;
-}
 .rooms-cards {
   @include flex-row;
   @include thin;
@@ -128,97 +96,6 @@ $blue-accent: #377dff;
   letter-spacing: -0.6px;
   top: 62%;
   left: 6%;
-}
-.info2 {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.info2_img {
-  width: 50%;
-}
-
-.info2_offer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  background-color: $info-background;
-  padding: 8.33% 8.33% 5.2% 5.2%;
-}
-.info2_offer-sale-up {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 16px;
-  color: $blue-accent;
-}
-.info2_offer-head {
-  font-family: Poppins;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 44px;
-  letter-spacing: -0.4px;
-}
-.info2_offer-desc {
-  font-family: Inter;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 32px;
-}
-.info2_offer-link {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: -0.4;
-  a:link {
-    color: black;
-  }
-  a:visited {
-    color: $secondary-color;
-  }
-}
-.articles {
-  padding: 4.16% 10% 4.16% 10%;
-}
-.articles_header {
-  font-family: Poppins;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 44px;
-  letter-spacing: -0.4;
-  padding-bottom: 40px;
-}
-.articles_block {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.articles_item {
-  display: flex;
-  flex-direction: column;
-  width: 31.23%;
-  gap: 12px;
-}
-.articles_name {
-  font-family: Poppins;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 28px;
-}
-.articles_read {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: -0.4;
-  &:link {
-    color: black;
-  }
-  &:visited {
-    color: $secondary-color;
-  }
 }
 .newsletter {
   background-image: url("../public/img/newsletter.png");

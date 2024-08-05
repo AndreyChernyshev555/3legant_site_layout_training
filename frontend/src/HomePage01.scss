@@ -24,37 +24,6 @@ $blue-accent: #377dff;
   margin-left: 12.5%;
   margin-right: 12.5%;
 }
-.description {
-  @include flex-row;
-  @include thin;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.description_item1 {
-  font-family: Poppins;
-  font-size: 72px;
-  font-weight: 500;
-  line-height: 76px;
-  letter-spacing: -2px;
-  text-align: left;
-}
-.description_back {
-  color: $secondary-color;
-}
-.description_item2 {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-  color: $secondary-color;
-  padding-right: 48px;
-}
-.description_label {
-  font-weight: 600;
-  color: $secondary-label;
-}
 
 .info2 {
   display: flex;
@@ -214,17 +183,6 @@ $blue-accent: #377dff;
     width: 100%;
     margin: 0;
     overflow: hidden;
-  }
-  .slider {
-    padding: 0;
-    margin-right: 11.1%;
-    margin-left: 11.1%;
-  }
-  .slide_button-left {
-    display: none;
-  }
-  .slide_button-right {
-    display: none;
   }
   .description {
     flex-direction: column;

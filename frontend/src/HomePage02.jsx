@@ -16,68 +16,68 @@ import headColl from "../public/img/headphones_collection/headColl.js";
 import headphones from "../public/img/headphones/headphones.js";
 
 const itemInfo = [
-  {
-    path: headphones[0],
-    rating: 5,
-    goods: "Skullcandy - Crusher anc 2 wireless headphones",
-    price: "$299.99",
-  },
-  {
-    path: headphones[1],
-    rating: 5,
-    goods: "Beats Studio Pro",
-    price: "$349.99",
-  },
-  {
-    path: headphones[2],
-    rating: 5,
-    goods: "Sony - WH-CH720N Wireless Noise Canceling",
-    price: "$149.99",
-  },
-  {
-    path: headphones[3],
-    rating: 5,
-    goods: "Skullcandy - Rail True Wireless Earbuds",
-    price: "$79.99",
-  },
-  {
-    path: headphones[4],
-    rating: 5,
-    goods: "Beats Studio Pro",
-    price: "$224.99",
-  },
-  {
-    path: headphones[5],
-    rating: 5,
-    goods: "JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports",
-    price: "$179.95",
-  },
-  {
-    path: headphones[6],
-    rating: 5,
-    goods: "Bose QuietComfort Headphones",
-    price: "$349.00",
-  },
-  {
-    path: headphones[7],
-    rating: 5,
-    goods: "AKG Y600NC Wireless",
-    price: "$349.99",
-  },
+    {
+        path: headphones[0],
+        rating: 5,
+        goods: "Skullcandy - Crusher anc 2 wireless headphones",
+        price: "$299.99",
+    },
+    {
+        path: headphones[1],
+        rating: 5,
+        goods: "Beats Studio Pro",
+        price: "$349.99",
+    },
+    {
+        path: headphones[2],
+        rating: 5,
+        goods: "Sony - WH-CH720N Wireless Noise Canceling",
+        price: "$149.99",
+    },
+    {
+        path: headphones[3],
+        rating: 5,
+        goods: "Skullcandy - Rail True Wireless Earbuds",
+        price: "$79.99",
+    },
+    {
+        path: headphones[4],
+        rating: 5,
+        goods: "Beats Studio Pro",
+        price: "$224.99",
+    },
+    {
+        path: headphones[5],
+        rating: 5,
+        goods: "JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports",
+        price: "$179.95",
+    },
+    {
+        path: headphones[6],
+        rating: 5,
+        goods: "Bose QuietComfort Headphones",
+        price: "$349.00",
+    },
+    {
+        path: headphones[7],
+        rating: 5,
+        goods: "AKG Y600NC Wireless",
+        price: "$349.99",
+    },
 ];
 
 const goodsInfo = [
-  {
-    label: "Headband",
-    img: headColl[0],
-    top: "81.5%",
-    left: "8.6%",
-  },
-  { label: "Earbuds", img: headColl[1] },
-  {
-    label: "Accessories",
-    img: headColl[2],
-  },
+    {
+        label: "Headband",
+        img: headColl[0],
+        top: "77.7%",
+        left: "8.6%",
+    },
+    { label: "Earbuds", img: headColl[1] },
+    {
+        label: "Accessories",
+        img: headColl[2],
+    },
 ];
 const collOffering = "Collection →";
 
@@ -104,51 +104,51 @@ const collOffering = "Collection →";
 //   }
 
 export default function HomePage02(props) {
-  const [cartItems, setCartItems] = useState(0);
-  const handleClick = () => setCartItems((cartItems) => cartItems + 1);
-  return (
-    <div>
-      <Offer
-        offerText={"30% off storewide — Limited time!"}
-        offerColors={{ background: "#141718", color: "#f3f5f7" }}
-        offerImg={{
-          filter:
-            "invert(100%) sepia(0%) saturate(0%) hue-rotate(240deg) brightness(105%) contrast(103%)",
-        }}
-        offerLink={{ color: "rgba(255, 171, 0, 0.64" }}
-      />
-      <Head
-        amount={cartItems}
-        homePageFunc={props.setFunc}
-        headStyle={{
-          backgroundColor: "rgba(255, 171, 0, 0.64)",
-          color: "#141718",
-        }}
-      />
-      <Promo />
-      <div className="page">
-        <Logos />
-        <NewArrivals
-          itemList={itemInfo.slice(0, 5)}
-          addFunc={handleClick}
-          wrap="no-wrap"
-          header="New Arrivals"
-        />
-        <div className="page-header">Shop Collection</div>
-        <Collection goods={goodsInfo} collOffer={collOffering} />
-        <NewArrivals
-          itemList={itemInfo}
-          addFunc={handleClick}
-          wrap="wrap"
-          header="Bestseller"
-          overflow="hidden"
-        />
-        <TimePromo />
-        <Pros />
-        <Newsfeed />
-        <Newsletter background={newsletterBack} />
-      </div>
-      <Footer />
-    </div>
-  );
+    const [cartItems, setCartItems] = useState(0);
+    const handleClick = () => setCartItems((cartItems) => cartItems + 1);
+    return (
+        <div>
+            <Offer
+                offerText={"30% off storewide — Limited time!"}
+                offerColors={{ background: "#141718", color: "#f3f5f7" }}
+                offerImg={{
+                    filter: "invert(100%) sepia(0%) saturate(0%) hue-rotate(240deg) brightness(105%) contrast(103%)",
+                }}
+                offerLink={{ color: "rgba(255, 171, 0, 0.64" }}
+            />
+            <Head
+                amount={cartItems}
+                homePageFunc={props.setFunc}
+                headStyle={{
+                    backgroundColor: "rgba(255, 171, 0, 0.64)",
+                    color: "#141718",
+                }}
+            />
+            <Promo />
+            <div className="page">
+                <Logos />
+                <NewArrivals
+                    itemList={itemInfo.slice(0, 5)}
+                    addFunc={handleClick}
+                    wrap="no-wrap"
+                    header="New Arrivals"
+                />
+                <div className="page-header">Shop Collection</div>
+                <Collection goods={goodsInfo} collOffer={collOffering} />
+                <NewArrivals
+                    itemList={itemInfo}
+                    addFunc={handleClick}
+                    wrap="wrap"
+                    header="Bestseller"
+                    overflow="hidden"
+                    type="gridable"
+                />
+                <TimePromo />
+                <Pros />
+                <Newsfeed />
+                <Newsletter background={newsletterBack} />
+            </div>
+            <Footer />
+        </div>
+    );
 }
