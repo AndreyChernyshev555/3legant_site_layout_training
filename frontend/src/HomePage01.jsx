@@ -79,7 +79,7 @@ export default function HomePage01(props) {
     });
     return (
         <div>
-            <FlyMenu displayParam={flyMenu} handleMenuClick={hideFlyMenu} />
+            <FlyMenu displayParam={flyMenu} hideClick={hideFlyMenu} />
             <ShadowBlock displayParam={flyMenu}/>
             <Offer offerText={"30% off storewide — Limited time!"} />
             <Head
@@ -89,7 +89,7 @@ export default function HomePage01(props) {
                     backgroundColor: "white",
                     color: "#6c7275",
                 }}
-                menuClick={showFlyMenu}
+                showClick={showFlyMenu}
             />
             <div className="page">
                 <Slider />

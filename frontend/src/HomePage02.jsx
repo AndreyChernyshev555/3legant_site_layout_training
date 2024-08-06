@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./HomePage02.scss";
+import FlyMenu from "./Components/FlyMenu/FlyMenu.jsx";
 import Offer from "./Components/Offer/Offer.jsx";
 import Head from "./Components/Head/Head.jsx";
 import Promo from "./Components/Promo/Promo.jsx";
@@ -106,8 +107,24 @@ const collOffering = "Collection →";
 export default function HomePage02(props) {
     const [cartItems, setCartItems] = useState(0);
     const handleClick = () => setCartItems((cartItems) => cartItems + 1);
+    
+    const [flyMenu, setFlyMenu] = useState(-1.2);
+    const showFlyMenu = () => {
+        setFlyMenu(0);
+    };
+    const hideFlyMenu = () => {
+        setFlyMenu(-1.2);
+    };
+
+    useEffect(() => {
+        document.body.style.overflow = (flyMenu == 0 ? "hidden" : "visible");
+      });
     return (
         <div>
+            <FlyMenu 
+                displayParam={flyMenu}
+                hideClick={hideFlyMenu}
+            />
             <Offer
                 offerText={"30% off storewide — Limited time!"}
                 offerColors={{ background: "#141718", color: "#f3f5f7" }}
@@ -123,6 +140,7 @@ export default function HomePage02(props) {
                     backgroundColor: "#FFC95C",
                     color: "#141718",
                 }}
+                showClick={showFlyMenu}
             />
             <Promo />
             <div className="page">

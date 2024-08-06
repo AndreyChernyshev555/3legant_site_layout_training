@@ -12,7 +12,7 @@ export default function Head(props) {
     return (
         <div className="head" style={props.headStyle}>
             <div className="head_logo">
-                <img className="head_menu" src={menuIcon} onClick={props.menuClick}/>
+                <img className="head_menu" src={menuIcon} onClick={props.showClick}/>
                 3legant.
             </div>
             <div className="head_section-block">

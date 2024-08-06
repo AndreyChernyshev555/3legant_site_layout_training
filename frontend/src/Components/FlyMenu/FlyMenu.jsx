@@ -48,7 +48,7 @@ export default function FlyMenu(props) {
                 <div className="fly-menu_head-text">3legant.</div>
                 <div
                     className="fly-menu_head-close"
-                    onClick={props.handleMenuClick}
+                    onClick={props.hideClick}
                 >
                     ✕
                 </div>
