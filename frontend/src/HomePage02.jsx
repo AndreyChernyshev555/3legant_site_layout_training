@@ -120,7 +120,7 @@ export default function HomePage02(props) {
                 amount={cartItems}
                 homePageFunc={props.setFunc}
                 headStyle={{
-                    backgroundColor: "rgba(255, 171, 0, 0.64)",
+                    backgroundColor: "#FFC95C",
                     color: "#141718",
                 }}
             />
