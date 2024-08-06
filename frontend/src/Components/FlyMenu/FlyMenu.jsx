@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import searchIcon from "../../../public/img/icons/search.svg";
 import "./FlyMenu.scss";
+import showIcon from "../../../public/img/icons/show.svg"
 
 export default function FlyMenu(props) {
     const widthProportion = 2 / 3;
@@ -57,6 +58,10 @@ export default function FlyMenu(props) {
                 <img className="fly-menu_search-img" src={searchIcon} />
                 <input className="fly-menu_search-input" placeholder="Search" />
             </div>
+            <div className="fly-menu_item">Home</div>
+            <div className="fly-menu_item">Shop <img src={showIcon}/></div>
+            <div className="fly-menu_item">Product <img src={showIcon}/></div>
+            <div className="fly-menu_item">Contact Us</div>
         </div>
     );
 }
