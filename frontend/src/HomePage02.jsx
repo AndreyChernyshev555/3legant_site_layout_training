@@ -105,8 +105,7 @@ const collOffering = "Collection →";
 //   }
 
 export default function HomePage02(props) {
-    const [cartItems, setCartItems] = useState(0);
-    const handleClick = () => setCartItems((cartItems) => cartItems + 1);
+    const cartItems = props.cartItems;
     
     const [flyMenu, setFlyMenu] = useState(-1.2);
     const showFlyMenu = () => {
@@ -134,7 +133,7 @@ export default function HomePage02(props) {
                 offerLink={{ color: "rgba(255, 171, 0, 0.64" }}
             />
             <Head
-                amount={cartItems}
+                amount={cartItems.length}
                 homePageFunc={props.setFunc}
                 headStyle={{
                     backgroundColor: "#FFC95C",
@@ -147,7 +146,6 @@ export default function HomePage02(props) {
                 <Logos />
                 <NewArrivals
                     itemList={itemInfo.slice(0, 5)}
-                    addFunc={handleClick}
                     wrap="no-wrap"
                     header="New Arrivals"
                 />
@@ -155,7 +153,6 @@ export default function HomePage02(props) {
                 <Collection goods={goodsInfo} collOffer={collOffering} />
                 <NewArrivals
                     itemList={itemInfo}
-                    addFunc={handleClick}
                     wrap="wrap"
                     header="Bestseller"
                     overflow="hidden"
