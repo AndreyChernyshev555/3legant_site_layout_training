@@ -1,5 +1,5 @@
 import React from "react";
-import paste1 from "../../public/img/paste1.png";
+import paste1 from "../img/paste1.png";
 
 export default function Info2() {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import "./Newsfeed.scss";
-import item0 from "../../../public/img/newsfeed/item0.svg";
-import item1 from "../../../public/img/newsfeed/item1.svg";
-import item2 from "../../../public/img/newsfeed/item2.svg";
-import item3 from "../../../public/img/newsfeed/item3.svg";
+import item0 from "../../img/newsfeed/item0.svg";
+import item1 from "../../img/newsfeed/item1.svg";
+import item2 from "../../img/newsfeed/item2.svg";
+import item3 from "../../img/newsfeed/item3.svg";
 
 const images = [
   item0, item1, item2, item3

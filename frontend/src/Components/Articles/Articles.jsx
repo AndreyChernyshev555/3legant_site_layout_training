@@ -1,8 +1,8 @@
 import React from "react";
 import ArticleItem from "./ArticleItem.jsx";
-import article1 from "../../../public/img/articles/article1.png";
-import article2 from "../../../public/img/articles/article2.png";
-import article3 from "../../../public/img/articles/article3.png";
+import article1 from "../../img/articles/article1.png";
+import article2 from "../../img/articles/article2.png";
+import article3 from "../../img/articles/article3.png";
 
 const articleList = [
   {

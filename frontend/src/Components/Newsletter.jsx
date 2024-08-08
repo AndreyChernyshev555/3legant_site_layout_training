@@ -1,5 +1,5 @@
 import React from "react";
-import emailIcon from "../../public/img/icons/email.svg";
+import emailIcon from "../img/icons/email.svg";
 
 export default function Newsletter(props) {
   const backgroundImg = window.matchMedia("screen and (max-width: 480px)")

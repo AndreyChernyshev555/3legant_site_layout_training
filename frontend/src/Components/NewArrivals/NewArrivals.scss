@@ -100,7 +100,7 @@ $blue-accent: #377dff;
 .new-arrivals_goods {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 2.6%;
     overflow-x: scroll;
     padding-bottom: 48px;
 }
@@ -120,7 +120,7 @@ $blue-accent: #377dff;
     font-weight: 600;
 }
 
-.new-arrivals_name {
+.new-arrivals_title {
     font-size: 16px;
     line-height: 26px;
 }

@@ -2,10 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import HeadIndicator from "./HeadIndicator.jsx";
 import "./Head.scss";
-import searchIcon from "../../../public/img/icons/search.svg";
-import userIcon from "../../../public/img/icons/user.svg";
-import cartIcon from "../../../public/img/icons/cart.svg";
-import menuIcon from "../../../public/img/icons/menu.svg";
+import searchIcon from "../../img/icons/search.svg";
+import userIcon from "../../img/icons/user.svg";
+import cartIcon from "../../img/icons/cart.svg";
+import menuIcon from "../../img/icons/menu.svg";
 
 export default function Head(props) {
     const navigate = useNavigate();
@@ -34,7 +34,6 @@ export default function Head(props) {
             <div className="head_buttons-block">
                 <img
                     className="head_button"
-                    onClick={() => navigate("/home2")}
                     src={searchIcon}
                 />
                 <img className="head_button" src={userIcon} />

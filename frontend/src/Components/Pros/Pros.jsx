@@ -1,9 +1,9 @@
 import React from "react";
 import "./Pros.scss";
-import fastIcon from "../../../public/img/icons/fast_delivery.svg";
-import moneyIcon from "../../../public/img/icons/money.svg";
-import lockIcon from "../../../public/img/icons/lock.svg";
-import callIcon from "../../../public/img/icons/call.svg";
+import fastIcon from "../../img/icons/fast_delivery.svg";
+import moneyIcon from "../../img/icons/money.svg";
+import lockIcon from "../../img/icons/lock.svg";
+import callIcon from "../../img/icons/call.svg";
 
 export default function Pros() {
   return (

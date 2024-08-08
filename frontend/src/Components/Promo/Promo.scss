@@ -2,13 +2,14 @@ $offer-background: #141718;
 $blue-accent: #377dff;
 .promo {
   position: relative;
-  background-image: url("../../../public/img/home_page2.svg");
+  background-image: url("../../img/home_page2.svg");
   background-size: cover;
+  background-position: center;
   height: 820px;
 }
 .promo_content {
   position: absolute;
-  width: 538px;
+  width: 40%;
   top: 30%;
   left: 60%;
 }
@@ -55,7 +56,7 @@ $blue-accent: #377dff;
 @media screen and (max-width: 480px) {
   .promo {
     width: 100%;
-    background-image: url("../../../public/img/home_page2_mobile.svg");
+    background-image: url("../../img/home_page2_mobile.svg");
   }
   .promo_content {
     top: 5%;

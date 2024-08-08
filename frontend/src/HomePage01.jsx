@@ -13,15 +13,15 @@ import Info2 from "./Components/Info2.jsx";
 import Articles from "./Components/Articles/Articles.jsx";
 import Newsletter from "./Components/Newsletter.jsx";
 import Footer from "./Components/Footer.jsx";
-import rooms from "../public/img/rooms/rooms.js";
-import newsletterBack from "../public/img/newsletter.png";
-import furniture from "../public/img/furniture/furniture.js";
+import rooms from "./img/rooms/rooms.js";
+import newsletterBack from "./img/newsletter.png";
+import furniture from "./img/furniture/furniture.js";
 
 const itemInfo = [
     {
         path: furniture[0],
         rating: 5,
-        goods: "Loveseat Sofa",
+        title: "Loveseat Sofa",
         price: "$199.00",
         oldPrice: "$400.00",
         discount: "-50%",
@@ -29,28 +29,28 @@ const itemInfo = [
     {
         path: furniture[1],
         rating: 5,
-        goods: "Table Lamp",
+        title: "Table Lamp",
         price: "$24.99",
         discount: "-50%",
     },
     {
         path: furniture[2],
         rating: 5,
-        goods: "Loveseat Sofa",
+        title: "Loveseat Sofa",
         price: "$24.00",
         discount: "-50%",
     },
     {
         path: furniture[3],
         rating: 5,
-        goods: "Bamboo Basket",
+        title: "Bamboo Basket",
         price: "$10.50",
         discount: "-50%",
     },
     {
         path: furniture[4],
         rating: 5,
-        goods: "Toaster",
+        title: "Toaster",
         price: "$249.25",
         oldPrice: "$400.00",
         discount: "-50%",
@@ -58,14 +58,14 @@ const itemInfo = [
 ];
 
 const goodsInfo = [
-    { label: "Living Room", img: rooms[2], top: "7%", left: "8.6%" },
-    { label: "Bedroom", img: rooms[0] },
-    { label: "Kitchen", img: rooms[1] },
+    { title: "Living Room", img: rooms[2], top: "7%", left: "8.6%" },
+    { title: "Bedroom", img: rooms[0] },
+    { title: "Kitchen", img: rooms[1] },
 ];
 const collOffering = "Shop Now";
+
 export default function HomePage01(props) {
-    const [cartItems, setCartItems] = useState(0);
-    const handleClick = () => setCartItems((cartItems) => cartItems + 1);
+    const [cartItems, setCartItems] = useState(props.goodsCart.length);
 
     const [flyMenu, setFlyMenu] = useState(-1.2);
     const showFlyMenu = () => {
@@ -75,7 +75,7 @@ export default function HomePage01(props) {
         setFlyMenu(-1.2);
     };
     useEffect(() => {
-      document.body.style.overflow = (flyMenu == 0 ? "hidden" : "visible");
+      document.body.style.overflow = (flyMenu === 0 ? "hidden" : "visible");
     });
     return (
         <div>
@@ -84,7 +84,6 @@ export default function HomePage01(props) {
             <Offer offerText={"30% off storewide — Limited time!"} />
             <Head
                 amount={cartItems}
-                homePageFunc={props.setFunc}
                 headStyle={{
                     backgroundColor: "white",
                     color: "#6c7275",
@@ -97,7 +96,6 @@ export default function HomePage01(props) {
                 <Collection goods={goodsInfo} collOffer={collOffering} />
                 <NewArrivals
                     itemList={itemInfo}
-                    addFunc={handleClick}
                     wrap="no-wrap"
                     header="New arrivals"
                 />

@@ -12,71 +12,71 @@ import TimePromo from "./Components/TimePromo/TimePromo.jsx";
 import Pros from "./Components/Pros/Pros.jsx";
 import Newsfeed from "./Components/Newsfeed/Newsfeed.jsx";
 import Newsletter from "./Components/Newsletter.jsx";
-import newsletterBack from "../public/img/newsletter2.svg";
-import headColl from "../public/img/headphones_collection/headColl.js";
-import headphones from "../public/img/headphones/headphones.js";
+import newsletterBack from "./img/newsletter2.svg";
+import headColl from "./img/headphones_collection/headColl.js";
+import headphones from "./img/headphones/headphones.js";
 
 const itemInfo = [
     {
         path: headphones[0],
         rating: 5,
-        goods: "Skullcandy - Crusher anc 2 wireless headphones",
+        title: "Skullcandy - Crusher anc 2 wireless headphones",
         price: "$299.99",
     },
     {
         path: headphones[1],
         rating: 5,
-        goods: "Beats Studio Pro",
+        title: "Beats Studio Pro",
         price: "$349.99",
     },
     {
         path: headphones[2],
         rating: 5,
-        goods: "Sony - WH-CH720N Wireless Noise Canceling",
+        title: "Sony - WH-CH720N Wireless Noise Canceling",
         price: "$149.99",
     },
     {
         path: headphones[3],
         rating: 5,
-        goods: "Skullcandy - Rail True Wireless Earbuds",
+        title: "Skullcandy - Rail True Wireless Earbuds",
         price: "$79.99",
     },
     {
         path: headphones[4],
         rating: 5,
-        goods: "Beats Studio Pro",
+        title: "Beats Studio Pro",
         price: "$224.99",
     },
     {
         path: headphones[5],
         rating: 5,
-        goods: "JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports",
+        title: "JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports",
         price: "$179.95",
     },
     {
         path: headphones[6],
         rating: 5,
-        goods: "Bose QuietComfort Headphones",
+        title: "Bose QuietComfort Headphones",
         price: "$349.00",
     },
     {
         path: headphones[7],
         rating: 5,
-        goods: "AKG Y600NC Wireless",
+        title: "AKG Y600NC Wireless",
         price: "$349.99",
     },
 ];
 
 const goodsInfo = [
     {
-        label: "Headband",
+        title: "Headband",
         img: headColl[0],
         top: "77.7%",
         left: "8.6%",
     },
-    { label: "Earbuds", img: headColl[1] },
+    { title: "Earbuds", img: headColl[1] },
     {
-        label: "Accessories",
+        title: "Accessories",
         img: headColl[2],
     },
 ];
@@ -117,7 +117,7 @@ export default function HomePage02(props) {
     };
 
     useEffect(() => {
-        document.body.style.overflow = (flyMenu == 0 ? "hidden" : "visible");
+        document.body.style.overflow = (flyMenu === 0 ? "hidden" : "visible");
       });
     return (
         <div>

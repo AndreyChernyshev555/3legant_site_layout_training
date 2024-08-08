@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import starIcon from "../../../public/img/star.svg";
+import starIcon from "../../img/star.svg";
 
 export default function NewArrivalsItem(props) {
     const rating = props.rating;
@@ -77,7 +77,7 @@ export default function NewArrivalsItem(props) {
             </div>
             <div className="new-arrivals_description">
                 <span className="new-arrivals_rating">{rateBlock}</span>
-                <span className="new-arrivals_name">{props.goods}</span>
+                <span className="new-arrivals_title">{props.title}</span>
                 <div className="new-arrivals_price">
                     <span className="new-arrivals_price-act">
                         {props.price}

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import SlideIndicator from "./SlideIndicator.jsx";
 import "./Slider.scss";
-import imSlide1 from "../../../public/img/slider_images/home_page_slide1.png";
-import imSlide2 from "../../../public/img/slider_images/home_page_slide2.jpg";
-import imSlide3 from "../../../public/img/slider_images/home_page_slide3.jpg";
-import imSlide4 from "../../../public/img/slider_images/home_page_slide4.jpg";
-import arrLeft from "../../../public/img/icons/arrow-left.svg";
-import arrRight from "../../../public/img/icons/arrow-right.svg";
+import imSlide1 from "../../img/slider_images/home_page_slide1.png";
+import imSlide2 from "../../img/slider_images/home_page_slide2.jpg";
+import imSlide3 from "../../img/slider_images/home_page_slide3.jpg";
+import imSlide4 from "../../img/slider_images/home_page_slide4.jpg";
+import arrLeft from "../../img/icons/arrow-left.svg";
+import arrRight from "../../img/icons/arrow-right.svg";
 
 const images = [imSlide1, imSlide2, imSlide3, imSlide4];
 

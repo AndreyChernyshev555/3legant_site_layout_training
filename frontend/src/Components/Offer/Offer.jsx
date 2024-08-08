@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Offer.scss";
-import offerIcon from "../../../public/img/icons/offer.svg";
+import offerIcon from "../../img/icons/offer.svg";
 
 export default function Offer(props) {
   const [isShown, setIsShown] = useState(true);

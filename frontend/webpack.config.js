@@ -2,9 +2,9 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.jsx",
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, "/dist"), // the bundle output path
+    path: path.join(__dirname, "/build"), // the bundle output path
     filename: "bundle.js", // the name of the bundle
   },
   plugins: [
@@ -36,31 +36,3 @@ module.exports = {
     ],
   },
 };
-
-// const path = require("path");
-
-// module.exports = {
-// 	entry: "./src/index.jsx",
-// 	output: {
-// 		path: path.join(__dirname, "/dist"),
-// 		filename: "bundle.js",
-// 	},
-// 	devServer: {
-// 		port: 3000,
-// 	},
-// 	module: {
-// 		rules: [
-// 			{
-// 				test: /\.(js|jsx)$/,
-// 				exclude: /node_modules/,
-// 				use: {
-// 					loader: "babel-loader",
-// 				},
-// 			},
-// 			{
-// 				test: /\.(sa|sc|c)ss$/,
-// 				use: ["style-loader", "css-loader", "sass-loader"],
-// 			}
-// 		],
-// 	},
-// };

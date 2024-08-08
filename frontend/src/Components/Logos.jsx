@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-import teamLogos from "../../public/img/team_logos/teamLogos.js";
+import teamLogos from "../img/team_logos/teamLogos.js";
 
 const proportion = 60 / 1920;
 
