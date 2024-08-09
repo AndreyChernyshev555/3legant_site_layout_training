@@ -100,8 +100,8 @@ export default function HomePage01(props) {
                 <Info2 />
                 <Articles />
                 <Newsletter background={newsletterBack} />
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 }

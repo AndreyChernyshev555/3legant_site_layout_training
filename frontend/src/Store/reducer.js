@@ -3,7 +3,7 @@ import * as actions from "./actionTypes";
 export default function reducer(state=[], action) {
     switch (action.type) {
         case actions.GOODS_ADD:
-            if (state.filter(item => action.info.title == item.title).length == 0) {
+            if (state.find(item => action.info.title == item.title)) {
                 return [...state, {
                     title: action.info.title,
                     price: action.info.price,

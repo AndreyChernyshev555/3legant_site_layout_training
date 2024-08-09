@@ -26,7 +26,7 @@ export default function CartGoods() {
                         Color: default
                     </div>
                     <div className="cart-goods_item-remove">
-                        x Remove
+                        ✕ Remove
                     </div>
                 </div>
             </div>
@@ -50,8 +50,8 @@ export default function CartGoods() {
         );
     }
     return (
-        <div className="cart-goods">
-            <div className="cart-goods_col-name">Product</div>
+        <div className="cart-goods" style={{gridTemplateRows: `1fr repeat(${cartItems.length}, 2fr)`}}>
+            <div className="cart-goods_col-main">Product</div>
             <div className="cart-goods_col-name">Quantity</div>
             <div className="cart-goods_col-name">Price</div>
             <div className="cart-goods_col-name">Subtotal</div>
