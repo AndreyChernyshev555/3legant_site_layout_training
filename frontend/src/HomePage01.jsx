@@ -36,7 +36,7 @@ const itemInfo = [
     {
         path: furniture[2],
         rating: 5,
-        title: "Loveseat Sofa",
+        title: "Beige Table Lamp",
         price: "$24.00",
         discount: "-50%",
     },

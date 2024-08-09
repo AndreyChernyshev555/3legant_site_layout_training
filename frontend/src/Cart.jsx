@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Cart.scss";
+import FlyMenu from "./Components/FlyMenu/FlyMenu.jsx";
 import Head from "./Components/Head/Head.jsx";
 import Footer from "./Components/Footer.jsx";
 import CartHead from "./Components/CartComps/CartHead/CartHead.jsx";
@@ -19,6 +20,7 @@ export default function Cart(props) {
     });
     return (
         <div>
+            <FlyMenu displayParam={flyMenu} hideClick={hideFlyMenu} />
             <Head
                 headStyle={{
                     backgroundColor: "white",

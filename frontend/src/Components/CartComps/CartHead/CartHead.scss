@@ -32,3 +32,13 @@ $focus-color: #black;
     align-content: center;
     color: $base-color;
 }
+
+@media screen and (max-width: 480px) {
+    .cart-head {
+        padding: 0;
+        overflow-x: scroll;
+    }
+    .cart-head_item {
+        width: 65vw;
+    }
+}

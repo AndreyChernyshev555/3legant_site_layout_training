@@ -71,3 +71,21 @@
     font-weight: 600;
     line-height: 22px;
 }
+
+@media screen and (max-width: 480px) {
+    .cart-goods {
+        grid-template-columns: 2fr 1fr;
+        margin: 5% 0 5% 0;
+        width: 100%;
+    }
+    .cart-goods_col-main {
+        grid-column: span 2;
+    }
+    .cart-goods_col-name {
+        display: none;
+    }
+    .cart-goods_item {
+        grid-row: span 3;
+        align-items: center;
+    }
+}

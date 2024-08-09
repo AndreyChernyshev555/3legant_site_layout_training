@@ -16,4 +16,21 @@
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr;
     grid-gap: 2.5%;
+    align-items: start;
+    height: fit-content;
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width: 480px) {
+    .cart {
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 44px;
+        letter-spacing: -0.4px;
+    }
+    .cart-content {
+        display: flex;
+        flex-direction: column;
+    }
 }
