@@ -1,0 +1,38 @@
+$secondary-color: #605f5f;
+
+.shop-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 40px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+}
+.shop-filter_head {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 0.25em;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+.shop-filter_param {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 15em;
+}
+.shop-filter_param-scroller {
+  display: flex;
+  flex-direction: column;
+  color: $secondary-color;
+  gap: 1em;
+  height: 13em;
+  overflow-y: scroll;
+  padding-right: 10%;
+}

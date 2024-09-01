@@ -1,0 +1,46 @@
+$secondary-color: #605f5f;
+
+.shop-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./img/shop_img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20.416vw;
+  width: 77.7%;
+  margin: 0 11.15% 0 11.15%;
+  gap: 1.25vw;
+}
+.shop-banner__grey {
+  color: $secondary-color;
+}
+.shop-banner_text1 {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.shop-banner_text2 {
+  font-family: Poppins;
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 58px;
+  letter-spacing: -1px;
+}
+.shop-banner_text3 {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.shop {
+  width: 77.7%;
+  padding: 0 11.15% 0 11.15%;
+  margin: 5% 0 5% 0;
+}

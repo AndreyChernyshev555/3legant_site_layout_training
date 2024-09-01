@@ -5,6 +5,7 @@ import Login from "./Login/Login.jsx";
 import HomePage01 from "./HomePage01.jsx";
 import HomePage02 from "./HomePage02.jsx";
 import Cart from "./Cart.jsx";
+import Shop from "./Shop.jsx";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/home1" element={<HomePage01 />} />
         <Route path="/home2" element={<HomePage02 />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/shop" element={<Shop />} />
       </Routes>
     </HashRouter>
   );
