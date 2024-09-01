@@ -15,6 +15,7 @@ export default function CartGoods() {
         className="cart-goods_empty"
         style={{
           gridColumn: "span 4",
+          padding: "5%",
         }}
       >
         There are no items yet
@@ -26,10 +27,12 @@ export default function CartGoods() {
       className="cart-goods"
       style={{ gridTemplateRows: `1fr repeat(${cartItems.length * 3}, 1fr)` }}
     >
-      <div className="cart-goods_col-main">Product</div>
-      <div className="cart-goods_col-name">Quantity</div>
-      <div className="cart-goods_col-name">Price</div>
-      <div className="cart-goods_col-name">Subtotal</div>
+      <div className="cart-goods_cols">
+        <div className="cart-goods_col-main">Product</div>
+        <div className="cart-goods_col-name">Quantity</div>
+        <div className="cart-goods_col-name">Price</div>
+        <div className="cart-goods_col-name">Subtotal</div>
+      </div>
       {cartItemsHTML}
     </div>
   );

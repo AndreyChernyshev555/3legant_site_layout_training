@@ -6,8 +6,8 @@ export default function CartGoodsItem(props) {
   const cartItem = props.item;
   const dispatch = useDispatch();
   return (
-    <>
-      <div className="cart-goods_item">
+    <div className="cart-goods_item">
+      <div className="cart-goods_item-main">
         <div
           className="cart-goods_item-img"
           style={{
@@ -53,6 +53,6 @@ export default function CartGoodsItem(props) {
       <div className="cart-goods_item-subtotal">
         {`$${(cartItem.price.slice(1) * cartItem.amount).toFixed(2)}`}
       </div>
-    </>
+    </div>
   );
 }
