@@ -36,3 +36,9 @@ $secondary-color: #605f5f;
   overflow-y: scroll;
   padding-right: 10%;
 }
+
+.shop-filter_prices-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

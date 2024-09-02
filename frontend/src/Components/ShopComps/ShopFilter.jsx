@@ -24,18 +24,12 @@ const prices = [
   "$400.00+",
 ];
 
-let categoriesHTML = [];
-let pricesHTML = [];
-
 export default function ShopFilter() {
+  let tempHTML = [];
   const [active, setActive] = useState(0);
-  const handleClick = (num) => {
-    if (num != active) setActive(num);
-    console.log(num, "set active");
-  };
 
   for (let i = 0; i < categories.length; i++) {
-    categoriesHTML.push(
+    tempHTML.push(
       <div
         className="shop-filter_categories-item"
         key={i}
@@ -50,10 +44,70 @@ export default function ShopFilter() {
     );
   }
 
+  const [categoriesHTML, setCategoriesHTML] = useState(tempHTML);
+
+  const handleClick = (num) => {
+    console.log(`Trying to set active elem number ${num}`);
+    let tempHTML = [...categoriesHTML];
+    let keyNum = active;
+    tempHTML[keyNum] = (
+      <div
+        className="shop-filter_categories-item"
+        key={keyNum}
+        style={{
+          color: "#605f5f",
+          borderBottom: "none",
+        }}
+        onClick={() => handleClick(keyNum)}
+      >
+        {categories[keyNum]}
+      </div>
+    );
+    tempHTML[num] = (
+      <div
+        className="shop-filter_categories-item"
+        key={num}
+        style={{
+          color: "black",
+          borderBottom: "1px solid black",
+        }}
+        onClick={() => handleClick(num)}
+      >
+        {categories[num]}
+      </div>
+    );
+    setCategoriesHTML(tempHTML);
+    console.log(num, "set active");
+    setActive(num);
+  };
+
+  const handlePriceChange = (id) => {
+    console.log(`handlePriceChange on ${id} started`);
+    
+    let checkboxArray = document.getElementsByClassName("shop-filter_prices-item-checkbox");
+    for (let i = 0; i < checkboxArray.length; i++) {
+      checkboxArray[i].checked = false;
+    }
+    document.getElementById(id).checked = true;
+  
+    console.log(`handlePriceChange on ended`);
+  };
+
+  let pricesHTML = [];
+
   for (let i = 0; i < prices.length; i++) {
     pricesHTML.push(
       <div className="shop-filter_prices-item" key={i}>
-        {prices[i]}
+        <label className="shop-filter_prices-item-text" htmlFor={prices[i]}>
+          {prices[i]}
+        </label>
+        <input
+          type="checkbox"
+          class="shop-filter_prices-item-checkbox"
+          id={prices[i]}
+          defaultChecked={i == 0 ? true : false}
+          onChange={() => handlePriceChange(prices[i])}
+        />
       </div>
     );
   }
