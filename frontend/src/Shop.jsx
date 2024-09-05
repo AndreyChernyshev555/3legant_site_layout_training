@@ -3,6 +3,7 @@ import Head from "./Components/Head/Head.jsx";
 import Newsletter from "./Components/Newsletter.jsx";
 import Footer from "./Components/Footer.jsx";
 import ShopFilter from "./Components/ShopComps/ShopFilter.jsx";
+import ShopContent from "./Components/ShopComps/ShopContent.jsx";
 import "./Shop.scss";
 import newsletterBack from "./img/newsletter.png";
 
@@ -22,6 +23,7 @@ export default function Shop() {
         </div>
         <div className="shop">
           <ShopFilter />
+          <ShopContent />
         </div>
         <Newsletter background={newsletterBack} />
       </div>

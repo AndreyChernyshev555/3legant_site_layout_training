@@ -35,7 +35,7 @@ export default function ShopFilter() {
         key={i}
         style={{
           color: i == active ? "black" : "#605f5f",
-          borderBottom: i == active ? "1px solid black" : "none",
+          textDecoration: i == active ? "underline" : "none",
         }}
         onClick={() => handleClick(i)}
       >
@@ -56,7 +56,6 @@ export default function ShopFilter() {
         key={keyNum}
         style={{
           color: "#605f5f",
-          borderBottom: "none",
         }}
         onClick={() => handleClick(keyNum)}
       >
@@ -69,7 +68,7 @@ export default function ShopFilter() {
         key={num}
         style={{
           color: "black",
-          borderBottom: "1px solid black",
+          textDecoration: "underline",
         }}
         onClick={() => handleClick(num)}
       >
@@ -83,13 +82,19 @@ export default function ShopFilter() {
 
   const handlePriceChange = (id) => {
     console.log(`handlePriceChange on ${id} started`);
-    
-    let checkboxArray = document.getElementsByClassName("shop-filter_prices-item-checkbox");
-    for (let i = 0; i < checkboxArray.length; i++) {
-      checkboxArray[i].checked = false;
+
+    if (id == prices[0]) {
+      let checkboxArray = document.getElementsByClassName(
+        "shop-filter_prices-item-checkbox"
+      );
+      for (let i = 0; i < checkboxArray.length; i++) {
+        checkboxArray[i].checked = false;
+      }
+    }
+    else {
+      document.getElementById(prices[0]).checked = false
     }
     document.getElementById(id).checked = true;
-  
     console.log(`handlePriceChange on ended`);
   };
 
@@ -117,13 +122,13 @@ export default function ShopFilter() {
       <div className="shop-filter_head">
         <img src={filterIcon} /> Filter
       </div>
-      <div className="shop-filter_param">
+      <div className="shop-filter_categories">
         CATEGORIES
-        <div className="shop-filter_param-scroller">{categoriesHTML}</div>
+        <div className="shop-filter_categories-scroller">{categoriesHTML}</div>
       </div>
-      <div className="shop-filter_param">
+      <div className="shop-filter_price">
         PRICE
-        <div className="shop-filter_param-scroller">{pricesHTML}</div>
+        <div className="shop-filter_price-items">{pricesHTML}</div>
       </div>
     </div>
   );

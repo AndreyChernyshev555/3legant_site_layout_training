@@ -21,24 +21,59 @@ $secondary-color: #605f5f;
   font-weight: 600;
   line-height: 32px;
 }
-.shop-filter_param {
+.shop-filter_categories {
   display: flex;
   flex-direction: column;
   gap: 1em;
   height: 15em;
 }
-.shop-filter_param-scroller {
+.shop-filter_categories-scroller {
   display: flex;
   flex-direction: column;
   color: $secondary-color;
   gap: 1em;
   height: 13em;
   overflow-y: scroll;
-  padding-right: 10%;
+  padding-right: 50%;
 }
-
+.shop-filter_price {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 15em;
+}
+.shop-filter_price-items {
+  display: flex;
+  flex-direction: column;
+  color: $secondary-color;
+  gap: 1em;
+  height: 13em;
+}
 .shop-filter_prices-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.shop-filter_prices-item-checkbox {
+  appearance: none;
+	background-color: white;
+	border: 1.5px solid #6C7275;
+  width: 1vw;
+  height: 1vw;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+
+.shop-filter_prices-item-checkbox:checked {
+  background-color: #141718;
+}
+.shop-filter_prices-item-checkbox:checked:after {
+	content: '\2714';
+	color: white;
+  position: absolute;
+  font-size: 15px;
+  top: 0vw;
+  left: 0.15vw;
 }

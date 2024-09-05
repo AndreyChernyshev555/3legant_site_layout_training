@@ -17,7 +17,7 @@ import rooms from "./img/rooms/rooms.js";
 import newsletterBack from "./img/newsletter.png";
 import furniture from "./img/furniture/furniture.js";
 
-const itemInfo = [
+export const itemInfo = [
   {
     path: furniture[0],
     rating: 5,
@@ -50,9 +50,8 @@ const itemInfo = [
   {
     path: furniture[4],
     rating: 5,
-    title: "Toaster",
-    price: "$249.25",
-    oldPrice: "$400.00",
+    title: "Black tray table",
+    price: "$19.99",
     discount: "-50%",
   },
 ];

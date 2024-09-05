@@ -1,0 +1,13 @@
+.shop-content_head {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 4.5%;
+}
+
+.shop-content_items {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 3%;
+}
